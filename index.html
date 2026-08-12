@@ -32,8 +32,7 @@
   .btn-sm{padding:5px 12px;border-radius:var(--radius);font-size:12px;cursor:pointer;border:1px solid var(--gray-200);background:#fff;}
   .btn-sm:hover{background:var(--gray-100);}
   .main{flex:1;padding:20px 24px;max-width:1100px;margin:0 auto;width:100%;}
-  .section{display:none;}
-  .section.active{display:block;}
+  .section{display:none;}.section.active{display:block;}
   .login-wrap{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--gray-100);}
   .login-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:36px;width:340px;}
   .login-logo{font-size:20px;font-weight:700;margin-bottom:4px;}
@@ -52,8 +51,7 @@
   .stat-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;}
   .stat-label{font-size:11px;color:var(--gray-600);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
   .stat-val{font-size:24px;font-weight:600;line-height:1;}
-  .stat-val.danger{color:var(--red-600);}
-  .stat-val.success{color:var(--green-400);}
+  .stat-val.danger{color:var(--red-600);}.stat-val.success{color:var(--green-400);}
   .card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);overflow:hidden;}
   .toolbar{padding:10px 14px;display:flex;gap:8px;border-bottom:1px solid var(--gray-200);}
   .toolbar input,.toolbar select{padding:7px 10px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:13px;background:#fff;color:var(--gray-900);outline:none;}
@@ -75,7 +73,6 @@
   .page-title{font-size:18px;font-weight:600;margin-bottom:16px;}
   .sale-form{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:20px;margin-bottom:18px;}
   .form-2col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  .form-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
   .full-col{grid-column:1/-1;}
   .price-hint{font-size:12px;padding:6px 10px;border-radius:var(--radius);margin-top:5px;display:none;}
   .price-hint.ok{background:var(--green-50);color:var(--green-600);display:block;}
@@ -90,8 +87,7 @@
   .sub-tabs{display:flex;gap:4px;margin-bottom:16px;border-bottom:1px solid var(--gray-200);padding-bottom:0;flex-wrap:wrap;}
   .sub-tab{padding:8px 14px;font-size:13px;cursor:pointer;border:none;background:none;color:var(--gray-600);border-bottom:2px solid transparent;margin-bottom:-1px;}
   .sub-tab.active{color:var(--green-400);border-bottom-color:var(--green-400);font-weight:500;}
-  .sub-section{display:none;}
-  .sub-section.active{display:block;}
+  .sub-section{display:none;}.sub-section.active{display:block;}
   .user-form{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:20px;margin-bottom:18px;}
   .section-label{font-size:13px;font-weight:500;margin-bottom:12px;}
   .price-row td input{width:90px;padding:4px 7px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px;}
@@ -119,14 +115,12 @@
   .inv-matched{background:var(--green-50);color:var(--green-600);}
   .inv-unmatched{background:var(--red-50);color:var(--red-600);}
   .inv-partial{background:var(--amber-50);color:var(--amber-600);}
-  .batch-card{background:var(--gray-100);border-radius:var(--radius);padding:8px 10px;font-size:11px;margin-top:6px;border-left:3px solid var(--green-400);}
-  .batch-card.expiring{border-left-color:var(--red-600);background:var(--red-50);}
-  .batch-card.warn{border-left-color:var(--amber-600);background:var(--amber-50);}
-  .expiry-banner{background:var(--red-50);border:1px solid var(--red-100);border-radius:var(--radius);padding:10px 14px;margin-bottom:14px;font-size:13px;color:var(--red-600);display:none;}
-  /* Variance report */
   .variance-pos{color:var(--green-600);font-weight:600;}
   .variance-neg{color:var(--red-600);font-weight:600;}
   .variance-zero{color:var(--gray-400);}
+  .drop-zone{border:2px dashed var(--gray-200);border-radius:var(--radius-lg);padding:28px;text-align:center;cursor:pointer;transition:border .2s;margin-bottom:16px;}
+  .drop-zone:hover{border-color:var(--green-400);}
+  .drop-zone-icon{font-size:28px;margin-bottom:8px;}
   @media print{
     body>*:not(.modal-bg){display:none!important;}
     .modal-bg{position:static!important;background:none!important;display:block!important;}
@@ -150,7 +144,7 @@
     <div class="form-group"><label>Password</label><input id="l-pass" type="password" autocomplete="current-password"></div>
     <div class="err-msg" id="l-err"></div>
     <button class="btn-primary" id="l-btn" onclick="doLogin()">Sign in</button>
-    <div class="hint-box">Default accounts:<br><strong>Staff:</strong> staff1/staff2/staff3 — <em>staff123</em><br><strong>Admin:</strong> admin1/admin2 — <em>admin2024</em></div>
+    <div class="hint-box">Staff: staff1/staff2/staff3 — <em>staff123</em><br>Admin: admin1/admin2 — <em>admin2024</em></div>
   </div>
 </div>
 
@@ -168,23 +162,20 @@
     </div>
   </div>
   <div class="main">
-    <div class="setup-banner" id="setup-banner">⚠️ Could not reach the Google Sheets backend. Make sure you've pasted the correct Apps Script URL and the script is deployed as a web app.</div>
+    <div class="setup-banner" id="setup-banner">⚠️ Could not reach backend. Check Apps Script URL.</div>
 
     <!-- STOCK -->
     <div class="section" id="sec-stock">
-      <div class="expiry-banner" id="expiry-banner"></div>
       <div class="stats-grid" id="stock-stats"></div>
       <div class="card">
         <div class="toolbar">
           <input id="stock-search" placeholder="Search product, code, supplier…" oninput="filterStock()">
           <select id="stock-sup-filter" onchange="filterStock()"><option value="">All suppliers</option></select>
           <select id="stock-status-filter" onchange="filterStock()">
-            <option value="">All statuses</option>
-            <option value="ok">In stock</option>
-            <option value="low">Reorder now</option>
+            <option value="">All statuses</option><option value="ok">In stock</option><option value="low">Reorder now</option>
           </select>
         </div>
-        <div class="tbl-wrap"><table id="stock-table">
+        <div class="tbl-wrap"><table>
           <thead><tr><th>Code</th><th>Product</th><th>Unit</th><th>Supplier</th><th style="text-align:right">Stock</th><th>Status</th></tr></thead>
           <tbody id="stock-tbody"></tbody>
         </table></div>
@@ -196,37 +187,25 @@
       <div class="page-title">Record a sale</div>
       <div class="sale-form">
         <div class="form-2col">
-          <div class="form-group full-col">
-            <label>Product</label>
-            <select id="s-product" onchange="onSaleProductChange()"><option value="">Select product…</option></select>
-          </div>
-          <div class="form-group">
-            <label>Quantity</label>
-            <input type="number" id="s-qty" min="1" value="1" oninput="validateSalePrice()">
-          </div>
-          <div class="form-group">
-            <label>Sell price (KES)</label>
+          <div class="form-group full-col"><label>Product</label>
+            <select id="s-product" onchange="onSaleProductChange()"><option value="">Select product…</option></select></div>
+          <div class="form-group"><label>Quantity</label>
+            <input type="number" id="s-qty" min="1" value="1" oninput="validateSalePrice()"></div>
+          <div class="form-group"><label>Sell price (KES)</label>
             <input type="number" id="s-price" placeholder="Enter price" oninput="validateSalePrice()">
-            <div class="price-hint" id="price-hint"></div>
-          </div>
-          <div class="form-group">
-            <label>Payment method</label>
+            <div class="price-hint" id="price-hint"></div></div>
+          <div class="form-group"><label>Payment method</label>
             <select id="s-payment">
               <option value="Cash">💵 Cash</option>
               <option value="MPesa Till">📱 MPesa Till</option>
               <option value="MPesa Send">📲 MPesa Send</option>
               <option value="Bank Transfer">🏦 Bank Transfer</option>
               <option value="Credit">📋 Credit</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Staff</label>
-            <input type="text" id="s-staff" readonly style="color:var(--gray-400)">
-          </div>
-          <div class="form-group">
-            <label>Notes / Customer (optional)</label>
-            <input type="text" id="s-notes" placeholder="Customer name, etc.">
-          </div>
+            </select></div>
+          <div class="form-group"><label>Staff</label>
+            <input type="text" id="s-staff" readonly style="color:var(--gray-400)"></div>
+          <div class="form-group"><label>Notes / Customer (optional)</label>
+            <input type="text" id="s-notes" placeholder="Customer name, etc."></div>
         </div>
         <div class="form-actions">
           <button class="submit-btn" id="sale-btn" onclick="recordSale()">Record sale</button>
@@ -234,16 +213,10 @@
         </div>
       </div>
       <div class="page-title" style="font-size:15px">Today's sales</div>
-      <div class="card">
-        <div class="tbl-wrap"><table>
-          <thead><tr>
-            <th>Time</th><th>Product</th><th style="text-align:right">Qty</th>
-            <th style="text-align:right">Price</th><th style="text-align:right">Total</th>
-            <th>Payment</th><th>By</th>
-          </tr></thead>
-          <tbody id="sales-tbody"></tbody>
-        </table></div>
-      </div>
+      <div class="card"><div class="tbl-wrap"><table>
+        <thead><tr><th>Time</th><th>Product</th><th style="text-align:right">Qty</th><th style="text-align:right">Price</th><th style="text-align:right">Total</th><th>Payment</th><th>By</th></tr></thead>
+        <tbody id="sales-tbody"></tbody>
+      </table></div></div>
     </div>
 
     <!-- ADMIN -->
@@ -252,9 +225,10 @@
         <button class="sub-tab active" data-tab="overview" onclick="showSubTab('overview')">Overview</button>
         <button class="sub-tab" data-tab="reorder" onclick="showSubTab('reorder')">Reorder list</button>
         <button class="sub-tab" data-tab="topup" onclick="showSubTab('topup')">Add stock</button>
+        <button class="sub-tab" data-tab="bulk-stock" onclick="showSubTab('bulk-stock')">📦 Bulk stock upload</button>
         <button class="sub-tab" data-tab="invoice" onclick="showSubTab('invoice')">📄 Invoice upload</button>
         <button class="sub-tab" data-tab="bulk-sales" onclick="showSubTab('bulk-sales')">📊 Bulk sales</button>
-        <button class="sub-tab" data-tab="stocktake" onclick="showSubTab('stocktake')">📦 Stock take</button>
+        <button class="sub-tab" data-tab="stocktake" onclick="showSubTab('stocktake')">🔍 Stock take</button>
         <button class="sub-tab" data-tab="prices" onclick="showSubTab('prices')">Prices</button>
         <button class="sub-tab" data-tab="users" onclick="showSubTab('users')">Users</button>
         <button class="sub-tab" data-tab="sales-log" onclick="showSubTab('sales-log')">Full sales log</button>
@@ -267,11 +241,7 @@
         <div class="card">
           <div style="padding:10px 14px;border-bottom:1px solid var(--gray-200);font-size:13px;font-weight:500">Sales today — profit breakdown</div>
           <div class="tbl-wrap"><table>
-            <thead><tr>
-              <th>Time</th><th>Product</th><th style="text-align:right">Qty</th>
-              <th style="text-align:right">Revenue</th><th style="text-align:right">Profit</th>
-              <th style="text-align:right">Margin</th><th>Payment</th><th>By</th>
-            </tr></thead>
+            <thead><tr><th>Time</th><th>Product</th><th style="text-align:right">Qty</th><th style="text-align:right">Revenue</th><th style="text-align:right">Profit</th><th style="text-align:right">Margin</th><th>Payment</th><th>By</th></tr></thead>
             <tbody id="admin-sales-tbody"></tbody>
           </table></div>
         </div>
@@ -285,16 +255,16 @@
         </table></div></div>
       </div>
 
-      <!-- Stock top-up -->
+      <!-- Add stock (single) -->
       <div class="sub-section" id="sub-topup">
         <div class="sale-form">
-          <div class="section-label">Add stock to a product</div>
+          <div class="section-label">Add stock to an existing product</div>
           <div class="form-2col">
             <div class="form-group full-col"><label>Product</label>
               <select id="tu-product" onchange="onTopupChange()"><option value="">Select product…</option></select></div>
             <div class="form-group"><label>Current stock</label><input type="text" id="tu-current" readonly style="color:var(--gray-400)"></div>
             <div class="form-group"><label>Quantity to add</label><input type="number" id="tu-qty" min="1" placeholder="e.g. 24"></div>
-            <div class="form-group"><label>Supplier / batch ref (optional)</label><input type="text" id="tu-note" placeholder="e.g. NBK-2026-010"></div>
+            <div class="form-group"><label>Ref (optional)</label><input type="text" id="tu-note" placeholder="Batch / delivery ref"></div>
             <div class="form-group"><label>New stock will be</label><input type="text" id="tu-preview" readonly style="font-weight:600;color:var(--green-600)"></div>
           </div>
           <div class="form-actions">
@@ -315,20 +285,56 @@
         </div>
       </div>
 
-      <!-- Invoice Upload -->
-      <div class="sub-section" id="sub-invoice">
+      <!-- BULK STOCK UPLOAD -->
+      <div class="sub-section" id="sub-bulk-stock">
         <div class="sale-form">
-          <div style="font-size:15px;font-weight:500;margin-bottom:6px">Upload supplier invoice</div>
-          <div style="font-size:13px;color:var(--gray-600);margin-bottom:16px">Upload a PDF, image or CSV of a supplier invoice. AI reads it, matches items to your products and shows a preview before updating stock.</div>
-          <div id="inv-drop" style="border:2px dashed var(--gray-200);border-radius:var(--radius-lg);padding:32px;text-align:center;cursor:pointer;transition:border .2s;margin-bottom:16px"
-            onclick="document.getElementById('inv-file').click()"
+          <div style="font-size:15px;font-weight:500;margin-bottom:6px">📦 Bulk Stock Upload</div>
+          <div style="font-size:13px;color:var(--gray-600);margin-bottom:16px">Upload an Excel or CSV file to add new products or restock existing ones. Download the template to see the required format.</div>
+          <div style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap">
+            <button class="submit-btn" style="background:var(--blue-600)" onclick="downloadStockTemplate()">⬇ Download template</button>
+            <button class="submit-btn" style="background:var(--blue-600)" onclick="downloadCurrentStock()">⬇ Download current stock list</button>
+          </div>
+          <div class="drop-zone" onclick="document.getElementById('bst-file').click()"
             ondragover="event.preventDefault();this.style.borderColor='var(--green-400)'"
             ondragleave="this.style.borderColor='var(--gray-200)'"
-            ondrop="handleDrop(event)">
-            <div style="font-size:32px;margin-bottom:8px">📄</div>
+            ondrop="handleBulkStockDrop(event)">
+            <div class="drop-zone-icon">📦</div>
             <div style="font-size:13px;font-weight:500;margin-bottom:4px">Click to upload or drag &amp; drop</div>
-            <div style="font-size:12px;color:var(--gray-400)">PDF, CSV, JPG, PNG supported</div>
-            <input type="file" id="inv-file" accept=".pdf,.csv,.jpg,.jpeg,.png" style="display:none" onchange="handleFileSelect(this)">
+            <div style="font-size:12px;color:var(--gray-400)">Excel, CSV, PDF, JPG, PNG — photo of invoice also accepted</div>
+            <input type="file" id="bst-file" accept=".xlsx,.csv,.pdf,.jpg,.jpeg,.png" style="display:none" onchange="handleBulkStockFile(this)">
+          </div>
+          <div id="bst-error" style="display:none;padding:10px 14px;background:var(--red-50);color:var(--red-600);border-radius:var(--radius);font-size:13px;margin-bottom:16px"></div>
+        </div>
+        <div id="bst-preview" style="display:none">
+          <div style="font-size:15px;font-weight:500;margin-bottom:8px">Preview — <span id="bst-count"></span> items ready</div>
+          <div id="bst-warnings" style="display:none;padding:10px 14px;background:var(--amber-50);color:var(--amber-600);border-radius:var(--radius);font-size:13px;margin-bottom:12px"></div>
+          <div class="card" style="margin-bottom:16px">
+            <div class="tbl-wrap"><table>
+              <thead><tr><th>Code</th><th>Product</th><th>Unit</th><th>Supplier</th><th style="text-align:right">Qty</th><th style="text-align:right">Cost (KES)</th><th>Action</th><th>Status</th></tr></thead>
+              <tbody id="bst-tbody"></tbody>
+            </table></div>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button class="submit-btn" id="bst-apply-btn" onclick="applyBulkStock()">✓ Apply to inventory</button>
+            <button class="btn-sm" onclick="resetBulkStock()">Cancel</button>
+            <div class="form-msg" id="bst-msg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Invoice Upload (AI) -->
+      <div class="sub-section" id="sub-invoice">
+        <div class="sale-form">
+          <div style="font-size:15px;font-weight:500;margin-bottom:6px">📄 Invoice Upload (AI-powered)</div>
+          <div style="font-size:13px;color:var(--gray-600);margin-bottom:16px">Upload a photo or PDF of a supplier invoice. AI reads it and matches to your products.</div>
+          <div class="drop-zone" onclick="document.getElementById('inv-file').click()"
+            ondragover="event.preventDefault();this.style.borderColor='var(--green-400)'"
+            ondragleave="this.style.borderColor='var(--gray-200)'"
+            ondrop="handleInvDrop(event)">
+            <div class="drop-zone-icon">📄</div>
+            <div style="font-size:13px;font-weight:500;margin-bottom:4px">Click to upload or drag &amp; drop</div>
+            <div style="font-size:12px;color:var(--gray-400)">PDF, JPG, PNG, CSV supported</div>
+            <input type="file" id="inv-file" accept=".pdf,.csv,.jpg,.jpeg,.png" style="display:none" onchange="handleInvFileSelect(this)">
           </div>
           <div id="inv-status" style="display:none;margin-bottom:16px">
             <div style="display:flex;align-items:center;gap:10px;padding:12px;background:var(--gray-100);border-radius:var(--radius)">
@@ -353,28 +359,27 @@
         </div>
       </div>
 
-      <!-- BULK SALES UPLOAD -->
+      <!-- Bulk Sales -->
       <div class="sub-section" id="sub-bulk-sales">
         <div class="sale-form">
           <div style="font-size:15px;font-weight:500;margin-bottom:6px">📊 Bulk Sales Upload</div>
-          <div style="font-size:13px;color:var(--gray-600);margin-bottom:16px">Upload an Excel or CSV file of past sales. Download the template first to see the required format.</div>
+          <div style="font-size:13px;color:var(--gray-600);margin-bottom:16px">Upload an Excel or CSV file of past sales.</div>
           <div style="display:flex;gap:10px;margin-bottom:16px">
             <button class="submit-btn" style="background:var(--blue-600)" onclick="downloadSalesTemplate()">⬇ Download template</button>
           </div>
-          <div id="bs-drop" style="border:2px dashed var(--gray-200);border-radius:var(--radius-lg);padding:32px;text-align:center;cursor:pointer;transition:border .2s;margin-bottom:16px"
-            onclick="document.getElementById('bs-file').click()"
+          <div class="drop-zone" onclick="document.getElementById('bs-file').click()"
             ondragover="event.preventDefault();this.style.borderColor='var(--green-400)'"
             ondragleave="this.style.borderColor='var(--gray-200)'"
             ondrop="handleBulkDrop(event)">
-            <div style="font-size:32px;margin-bottom:8px">📊</div>
-            <div style="font-size:13px;font-weight:500;margin-bottom:4px">Click to upload sales file or drag &amp; drop</div>
-            <div style="font-size:12px;color:var(--gray-400)">Excel (.xlsx) or CSV — use the template format</div>
+            <div class="drop-zone-icon">📊</div>
+            <div style="font-size:13px;font-weight:500;margin-bottom:4px">Click to upload or drag &amp; drop</div>
+            <div style="font-size:12px;color:var(--gray-400)">Excel (.xlsx) or CSV</div>
             <input type="file" id="bs-file" accept=".xlsx,.csv" style="display:none" onchange="handleBulkSalesFile(this)">
           </div>
           <div id="bs-error" style="display:none;padding:10px 14px;background:var(--red-50);color:var(--red-600);border-radius:var(--radius);font-size:13px;margin-bottom:16px"></div>
         </div>
         <div id="bs-preview" style="display:none">
-          <div style="font-size:15px;font-weight:500;margin-bottom:8px">Preview — <span id="bs-count"></span> sales ready to upload</div>
+          <div style="font-size:15px;font-weight:500;margin-bottom:8px">Preview — <span id="bs-count"></span> sales ready</div>
           <div id="bs-warnings" style="display:none;padding:10px 14px;background:var(--amber-50);color:var(--amber-600);border-radius:var(--radius);font-size:13px;margin-bottom:12px"></div>
           <div class="card" style="margin-bottom:16px">
             <div class="tbl-wrap"><table>
@@ -390,20 +395,19 @@
         </div>
       </div>
 
-      <!-- STOCK TAKE -->
+      <!-- Stock Take -->
       <div class="sub-section" id="sub-stocktake">
         <div class="sale-form">
-          <div style="font-size:15px;font-weight:500;margin-bottom:6px">📦 Stock Take</div>
-          <div style="font-size:13px;color:var(--gray-600);margin-bottom:16px">Count your physical stock and upload to see variance against system stock. Download the template, fill in actual counts, upload and get a variance report.</div>
+          <div style="font-size:15px;font-weight:500;margin-bottom:6px">🔍 Stock Take</div>
+          <div style="font-size:13px;color:var(--gray-600);margin-bottom:16px">Download the sheet, fill in physical counts, upload to get a variance report.</div>
           <div style="display:flex;gap:10px;margin-bottom:16px">
             <button class="submit-btn" style="background:var(--blue-600)" onclick="downloadStocktakeTemplate()">⬇ Download stock take sheet</button>
           </div>
-          <div id="st-drop" style="border:2px dashed var(--gray-200);border-radius:var(--radius-lg);padding:32px;text-align:center;cursor:pointer;transition:border .2s;margin-bottom:16px"
-            onclick="document.getElementById('st-file').click()"
+          <div class="drop-zone" onclick="document.getElementById('st-file').click()"
             ondragover="event.preventDefault();this.style.borderColor='var(--green-400)'"
             ondragleave="this.style.borderColor='var(--gray-200)'"
             ondrop="handleStDrop(event)">
-            <div style="font-size:32px;margin-bottom:8px">📦</div>
+            <div class="drop-zone-icon">🔍</div>
             <div style="font-size:13px;font-weight:500;margin-bottom:4px">Upload completed stock take sheet</div>
             <div style="font-size:12px;color:var(--gray-400)">Excel (.xlsx) or CSV</div>
             <input type="file" id="st-file" accept=".xlsx,.csv" style="display:none" onchange="handleStocktakeFile(this)">
@@ -414,27 +418,16 @@
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
             <div style="font-size:15px;font-weight:500">Variance Report — <span id="st-date"></span></div>
             <div style="display:flex;gap:8px">
-              <button class="btn-sm" onclick="window.print()">🖨 Print report</button>
-              <button class="btn-sm" onclick="applyStocktake()" id="st-apply-btn" style="background:var(--green-400);color:#fff;border-color:var(--green-400)">✓ Apply corrections to system</button>
+              <button class="btn-sm" onclick="window.print()">🖨 Print</button>
+              <button class="btn-sm" onclick="applyStocktake()" id="st-apply-btn" style="background:var(--green-400);color:#fff;border-color:var(--green-400)">✓ Apply corrections</button>
             </div>
           </div>
           <div class="stats-grid" id="st-stats"></div>
           <div class="card" style="margin-bottom:16px">
-            <div class="toolbar" style="border-bottom:1px solid var(--gray-200)">
-              <input id="st-search" placeholder="Search…" oninput="filterStocktake()">
-              <select id="st-filter" onchange="filterStocktake()">
-                <option value="">All items</option>
-                <option value="short">Short (system > physical)</option>
-                <option value="over">Over (physical > system)</option>
-                <option value="match">Match</option>
-              </select>
-            </div>
+            <div class="toolbar"><input id="st-search" placeholder="Search…" oninput="filterStocktake()">
+              <select id="st-filter" onchange="filterStocktake()"><option value="">All</option><option value="short">Short</option><option value="over">Over</option><option value="match">Match</option></select></div>
             <div class="tbl-wrap"><table>
-              <thead><tr>
-                <th>Code</th><th>Product</th><th style="text-align:right">System Qty</th>
-                <th style="text-align:right">Physical Count</th><th style="text-align:right">Variance</th>
-                <th style="text-align:right">Value diff (KES)</th><th>Action</th>
-              </tr></thead>
+              <thead><tr><th>Code</th><th>Product</th><th style="text-align:right">System</th><th style="text-align:right">Physical</th><th style="text-align:right">Variance</th><th style="text-align:right">Value diff</th><th>Status</th></tr></thead>
               <tbody id="st-tbody"></tbody>
             </table></div>
           </div>
@@ -445,12 +438,10 @@
       <!-- Prices -->
       <div class="sub-section" id="sub-prices">
         <div class="card">
-          <div style="padding:10px 14px;border-bottom:1px solid var(--gray-200);font-size:13px;color:var(--gray-600)">Edit cost price or minimum sell price inline, then click Save.</div>
-          <div class="toolbar" style="border-bottom:1px solid var(--gray-200)">
-            <input id="price-search" placeholder="Search product…" oninput="filterPricesTable()">
-          </div>
+          <div style="padding:10px 14px;border-bottom:1px solid var(--gray-200);font-size:13px;color:var(--gray-600)">Edit cost or minimum sell price inline, then click Save.</div>
+          <div class="toolbar"><input id="price-search" placeholder="Search product…" oninput="filterPricesTable()"></div>
           <div class="tbl-wrap"><table>
-            <thead><tr><th>Code</th><th>Product</th><th style="text-align:right">Cost price (KES)</th><th style="text-align:right">Min sell price (KES)</th><th style="text-align:right">Margin at min price</th><th></th></tr></thead>
+            <thead><tr><th>Code</th><th>Product</th><th style="text-align:right">Cost (KES)</th><th style="text-align:right">Min sell (KES)</th><th style="text-align:right">Margin</th><th></th></tr></thead>
             <tbody id="prices-tbody"></tbody>
           </table></div>
         </div>
@@ -466,10 +457,7 @@
             <div class="form-group"><label>Full name</label><input type="text" id="u-fullname" placeholder="e.g. Mary W."></div>
             <div class="form-group"><label>Role</label><select id="u-role-sel"><option value="staff">Staff</option><option value="admin">Admin</option></select></div>
           </div>
-          <div class="form-actions">
-            <button class="submit-btn" onclick="saveUser()">Save user</button>
-            <div class="form-msg" id="user-msg"></div>
-          </div>
+          <div class="form-actions"><button class="submit-btn" onclick="saveUser()">Save user</button><div class="form-msg" id="user-msg"></div></div>
         </div>
         <div class="card"><div class="tbl-wrap"><table>
           <thead><tr><th>Username</th><th>Name</th><th>Role</th><th>Active</th><th></th></tr></thead>
@@ -480,19 +468,12 @@
       <!-- Full sales log -->
       <div class="sub-section" id="sub-sales-log">
         <div class="toolbar" style="margin-bottom:12px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius)">
-          <label style="font-size:12px;color:var(--gray-600)">From</label>
-          <input type="date" id="log-from" style="width:140px">
-          <label style="font-size:12px;color:var(--gray-600)">To</label>
-          <input type="date" id="log-to" style="width:140px">
+          <label style="font-size:12px;color:var(--gray-600)">From</label><input type="date" id="log-from" style="width:140px">
+          <label style="font-size:12px;color:var(--gray-600)">To</label><input type="date" id="log-to" style="width:140px">
           <button class="btn-sm" onclick="loadSalesLog()">Load</button>
         </div>
         <div class="card"><div class="tbl-wrap"><table>
-          <thead><tr>
-            <th>Date / Time</th><th>Code</th><th>Product</th>
-            <th style="text-align:right">Qty</th><th style="text-align:right">Price</th>
-            <th style="text-align:right">Total</th><th style="text-align:right">Profit</th>
-            <th>Payment</th><th>By</th>
-          </tr></thead>
+          <thead><tr><th>Date / Time</th><th>Code</th><th>Product</th><th style="text-align:right">Qty</th><th style="text-align:right">Price</th><th style="text-align:right">Total</th><th style="text-align:right">Profit</th><th>Payment</th><th>By</th></tr></thead>
           <tbody id="log-tbody"></tbody>
         </table></div></div>
       </div>
@@ -500,28 +481,23 @@
       <!-- Expiring -->
       <div class="sub-section" id="sub-expiring">
         <div class="card">
-          <div style="padding:10px 14px;border-bottom:1px solid var(--gray-200);font-size:13px;color:var(--gray-600)">Products with batches expiring within 30 days.</div>
+          <div style="padding:10px 14px;border-bottom:1px solid var(--gray-200);font-size:13px;color:var(--gray-600)">Products expiring within 30 days.</div>
           <div class="tbl-wrap"><table>
-            <thead><tr><th>Code</th><th>Product</th><th>Batch No.</th><th>Mfg Date</th><th>Expiry Date</th><th style="text-align:right">Qty</th><th>Days left</th></tr></thead>
+            <thead><tr><th>Code</th><th>Product</th><th>Batch</th><th>Mfg Date</th><th>Expiry</th><th style="text-align:right">Qty</th><th>Days left</th></tr></thead>
             <tbody id="expiring-tbody"></tbody>
           </table></div>
         </div>
       </div>
-
-    </div><!-- /sec-admin -->
-  </div><!-- /main -->
-</div><!-- /app-shell -->
+    </div>
+  </div>
+</div>
 
 <div class="overlay" id="overlay"><div class="spinner"></div></div>
 
 <!-- Receipt Modal -->
 <div class="modal-bg" id="receipt-modal">
   <div class="receipt">
-    <div class="r-header">
-      <h2>Osotua Farm Solutions</h2>
-      <p>Official Receipt</p>
-      <p id="r-datetime"></p>
-    </div>
+    <div class="r-header"><h2>Osotua Farm Solutions</h2><p>Official Receipt</p><p id="r-datetime"></p></div>
     <div class="r-row"><span>Product:</span><span id="r-product"></span></div>
     <div class="r-row"><span>Code:</span><span id="r-code"></span></div>
     <div class="r-row"><span>Quantity:</span><span id="r-qty"></span></div>
@@ -539,7 +515,6 @@
 </div>
 
 <script>
-// ── State ──────────────────────────────────────────────────────────────
 let API_URL='';
 let currentUser=null;
 let stockData=[];
@@ -547,7 +522,9 @@ let priceData=[];
 let salesData=[];
 let saleProduct=null;
 let bulkSalesRows=[];
+let bulkStockRows=[];
 let stocktakeRows=[];
+let invoiceItems=[];
 
 const $=id=>document.getElementById(id);
 const fmt=n=>Number(n).toLocaleString('en-KE',{maximumFractionDigits:0});
@@ -560,78 +537,57 @@ async function api(params){
   const method=postActions.includes(params.action)?'POST':'GET';
   if(method==='GET'){
     Object.keys(params).forEach(k=>url.searchParams.set(k,params[k]));
-    const r=await fetch(url.toString(),{redirect:'follow'});
-    return r.json();
+    const r=await fetch(url.toString(),{redirect:'follow'});return r.json();
   }else{
-    const r=await fetch(url.toString(),{method:'POST',redirect:'follow',headers:{'Content-Type':'text/plain'},body:JSON.stringify(params)});
-    return r.json();
+    const r=await fetch(url.toString(),{method:'POST',redirect:'follow',headers:{'Content-Type':'text/plain'},body:JSON.stringify(params)});return r.json();
   }
 }
 
-// ── Login / Logout ─────────────────────────────────────────────────────
+// LOGIN
 async function doLogin(){
-  const url=$('api-url').value.trim();
-  const user=$('l-user').value.trim();
-  const pass=$('l-pass').value;
-  const err=$('l-err');
+  const url=$('api-url').value.trim();const user=$('l-user').value.trim();const pass=$('l-pass').value;const err=$('l-err');
   err.style.display='none';
   if(!url){showErr(err,'Paste your Apps Script URL first.');return;}
   if(!user){showErr(err,'Enter your username.');return;}
   if(!pass){showErr(err,'Enter your password.');return;}
-  API_URL=url;
-  $('l-btn').disabled=true;
-  loading(true);
+  API_URL=url;$('l-btn').disabled=true;loading(true);
   try{
     const res=await api({action:'login',username:user,password:pass});
     if(res.ok){
-      currentUser=res.user;
-      localStorage.setItem('osotua_url',url);
-      $('login-wrap').style.display='none';
-      $('app-shell').style.display='flex';
-      $('u-name').textContent=currentUser.name;
-      $('u-role').textContent=currentUser.role;
+      currentUser=res.user;localStorage.setItem('osotua_url',url);
+      $('login-wrap').style.display='none';$('app-shell').style.display='flex';
+      $('u-name').textContent=currentUser.name;$('u-role').textContent=currentUser.role;
       $('u-role').className='badge badge-'+currentUser.role;
-      buildNav();
-      await loadAll();
-      showTab('stock');
+      buildNav();await loadAll();showTab('stock');
     }else{showErr(err,res.error||'Login failed.');}
   }catch(e){showErr(err,'Could not reach the server. Check the URL and try again.');}
-  loading(false);
-  $('l-btn').disabled=false;
+  loading(false);$('l-btn').disabled=false;
 }
 function showErr(el,msg){el.textContent=msg;el.style.display='block';}
 function doLogout(){currentUser=null;stockData=[];priceData=[];salesData=[];$('login-wrap').style.display='flex';$('app-shell').style.display='none';$('l-pass').value='';}
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&$('login-wrap').style.display!=='none')doLogin();});
 window.addEventListener('load',()=>{const saved=localStorage.getItem('osotua_url');if(saved)$('api-url').value=saved;});
 
-// ── Nav ───────────────────────────────────────────────────────────────
+// NAV
 function buildNav(){
-  const tabs=currentUser.role==='admin'
-    ?[['stock','Stock'],['sales','Log sale'],['admin','Admin']]
-    :[['stock','Stock'],['sales','Log sale']];
+  const tabs=currentUser.role==='admin'?[['stock','Stock'],['sales','Log sale'],['admin','Admin']]:[['stock','Stock'],['sales','Log sale']];
   $('main-nav').innerHTML=tabs.map(([id,label])=>`<button class="nav-btn" id="nav-${id}" onclick="showTab('${id}')">${label}</button>`).join('');
 }
 function showTab(id){
   document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
-  $('sec-'+id).classList.add('active');
-  const nb=$('nav-'+id);if(nb)nb.classList.add('active');
-  if(id==='stock')renderStock();
-  if(id==='sales')renderSales();
-  if(id==='admin')renderAdmin();
+  $('sec-'+id).classList.add('active');const nb=$('nav-'+id);if(nb)nb.classList.add('active');
+  if(id==='stock')renderStock();if(id==='sales')renderSales();if(id==='admin')renderAdmin();
 }
 
-// ── Load data ──────────────────────────────────────────────────────────
 async function loadAll(){
   loading(true);
   const[sr,pr,salesRes]=await Promise.all([api({action:'getStock'}),api({action:'getPrices'}),api({action:'getSales'})]);
-  if(sr.ok)stockData=sr.data;
-  if(pr.ok)priceData=pr.data;
-  if(salesRes.ok)salesData=salesRes.data;
+  if(sr.ok)stockData=sr.data;if(pr.ok)priceData=pr.data;if(salesRes.ok)salesData=salesRes.data;
   loading(false);
 }
 
-// ── Stock view ─────────────────────────────────────────────────────────
+// STOCK VIEW
 function renderStock(){
   const reorder=stockData.filter(p=>Number(p.Stock)<=Number(p.ReorderLevel));
   $('stock-stats').innerHTML=`
@@ -639,29 +595,24 @@ function renderStock(){
     <div class="stat-card"><div class="stat-label">Reorder now</div><div class="stat-val danger">${reorder.length}</div></div>
     <div class="stat-card"><div class="stat-label">Total units</div><div class="stat-val">${stockData.reduce((a,p)=>a+Number(p.Stock),0)}</div></div>
     <div class="stat-card"><div class="stat-label">In stock</div><div class="stat-val success">${stockData.filter(p=>Number(p.Stock)>Number(p.ReorderLevel)).length}</div></div>`;
-  const sups=[...new Set(stockData.map(p=>p.Supplier))].sort();
-  const cur=$('stock-sup-filter').value;
+  const sups=[...new Set(stockData.map(p=>p.Supplier))].sort();const cur=$('stock-sup-filter').value;
   $('stock-sup-filter').innerHTML='<option value="">All suppliers</option>'+sups.map(s=>`<option value="${s}"${s===cur?' selected':''}>${s}</option>`).join('');
   filterStock();
 }
 function filterStock(){
-  const q=($('stock-search').value||'').toLowerCase();
-  const sup=$('stock-sup-filter').value;
-  const st=$('stock-status-filter').value;
+  const q=($('stock-search').value||'').toLowerCase();const sup=$('stock-sup-filter').value;const st=$('stock-status-filter').value;
   const rows=stockData.filter(p=>{
     const ok=Number(p.Stock)>Number(p.ReorderLevel);
-    if(sup&&p.Supplier!==sup)return false;
-    if(st==='ok'&&!ok)return false;
-    if(st==='low'&&ok)return false;
+    if(sup&&p.Supplier!==sup)return false;if(st==='ok'&&!ok)return false;if(st==='low'&&ok)return false;
     return!q||p.Name.toLowerCase().includes(q)||p.Code.toLowerCase().includes(q)||(p.Supplier||'').toLowerCase().includes(q);
   });
   $('stock-tbody').innerHTML=rows.length?rows.map(p=>{
     const ok=Number(p.Stock)>Number(p.ReorderLevel);
     return`<tr><td class="code-cell">${p.Code}</td><td>${p.Name}</td><td style="color:var(--gray-400)">${p.Unit}</td><td style="color:var(--gray-400)">${p.Supplier}</td><td style="text-align:right;font-weight:600">${p.Stock}</td><td>${ok?'<span class="pill pill-ok">✓ OK</span>':'<span class="pill pill-warn">⚠ Reorder</span>'}</td></tr>`;
-  }).join(''):'<tr><td colspan="6" class="empty-state">No products match your filter.</td></tr>';
+  }).join(''):'<tr><td colspan="6" class="empty-state">No products match filter.</td></tr>';
 }
 
-// ── Sales view ─────────────────────────────────────────────────────────
+// SALES VIEW
 function renderSales(){
   $('s-staff').value=currentUser.name;
   $('s-product').innerHTML='<option value="">Select product…</option>'+stockData.map(p=>`<option value="${p.Code}">${p.Code} — ${p.Name} (${p.Stock} left)</option>`).join('');
@@ -671,94 +622,74 @@ function renderSalesLog(){
   const today=new Date().toDateString();
   const rows=salesData.filter(s=>new Date(s.Timestamp).toDateString()===today);
   $('sales-tbody').innerHTML=rows.length?rows.slice().reverse().map(s=>`<tr>
-    <td style="color:var(--gray-400)">${fmtD(s.Timestamp)}</td>
-    <td>${s.ProductName}</td>
-    <td style="text-align:right">${s.Qty}</td>
-    <td style="text-align:right">KES ${fmt(s.SellPrice)}</td>
+    <td style="color:var(--gray-400)">${fmtD(s.Timestamp)}</td><td>${s.ProductName}</td>
+    <td style="text-align:right">${s.Qty}</td><td style="text-align:right">KES ${fmt(s.SellPrice)}</td>
     <td style="text-align:right;font-weight:600">KES ${fmt(s.LineTotal)}</td>
     <td><span class="pill ${s.Notes&&s.Notes.includes('MPesa')?'pill-blue':'pill-ok'}" style="font-size:10px">${s.Notes||'Cash'}</span></td>
     <td style="color:var(--gray-400)">${s.Staff}</td>
-  </tr>`).join(''):'<tr><td colspan="7" class="empty-state">No sales recorded today yet.</td></tr>';
+  </tr>`).join(''):'<tr><td colspan="7" class="empty-state">No sales today yet.</td></tr>';
 }
 function onSaleProductChange(){
-  const code=$('s-product').value;
-  saleProduct=stockData.find(p=>p.Code===code)||null;
+  const code=$('s-product').value;saleProduct=stockData.find(p=>p.Code===code)||null;
   const pr=priceData.find(p=>p.Code===code);
-  if(saleProduct&&pr){$('s-price').placeholder=`Min: KES ${fmt(pr.MinSellPrice)}`;}
+  if(saleProduct&&pr)$('s-price').placeholder=`Min: KES ${fmt(pr.MinSellPrice)}`;
   validateSalePrice();
 }
 function validateSalePrice(){
   if(!saleProduct){$('price-hint').className='price-hint';return;}
   const pr=priceData.find(p=>p.Code===saleProduct.Code);
-  const min=pr?Number(pr.MinSellPrice):0;
-  const sell=parseFloat($('s-price').value)||0;
-  const hint=$('price-hint');
+  const cost=pr?Number(pr.CostPrice):0;
+  const min=pr?Math.max(Number(pr.MinSellPrice),Math.ceil(cost*1.25)):0;
+  const sell=parseFloat($('s-price').value)||0;const hint=$('price-hint');
   if(sell<=0){hint.className='price-hint';return;}
-  if(sell<min){hint.textContent=`⚠ Below minimum — min price is KES ${fmt(min)}`;hint.className='price-hint warn';}
-  else{hint.textContent=`✓ Valid — min price is KES ${fmt(min)}`;hint.className='price-hint ok';}
+  const margin=cost>0?Math.round((sell-cost)/sell*100):100;
+  if(sell<min){hint.textContent=`⚠ Rejected — min 25% margin. Min price: KES ${fmt(min)}`;hint.className='price-hint warn';}
+  else{hint.textContent=`✓ Valid — margin ${margin}% | Min: KES ${fmt(min)}`;hint.className='price-hint ok';}
 }
 async function recordSale(){
-  const msg=$('sale-msg');
-  msg.className='form-msg';
+  const msg=$('sale-msg');msg.className='form-msg';
   if(!saleProduct){showFormMsg(msg,'err','Select a product first.');return;}
-  const qty=parseInt($('s-qty').value)||0;
-  const price=parseFloat($('s-price').value)||0;
-  const payment=$('s-payment').value;
+  const qty=parseInt($('s-qty').value)||0;const price=parseFloat($('s-price').value)||0;const payment=$('s-payment').value;
   const pr=priceData.find(p=>p.Code===saleProduct.Code);
-  const min=pr?Number(pr.MinSellPrice):0;
+  const cost=pr?Number(pr.CostPrice):0;const min=pr?Math.max(Number(pr.MinSellPrice),Math.ceil(cost*1.25)):0;
+  const margin=cost>0?((price-cost)/price*100):100;
   if(qty<1){showFormMsg(msg,'err','Enter a valid quantity.');return;}
-  if(price<min){showFormMsg(msg,'err',`Price is below minimum (KES ${fmt(min)}). Check with manager.`);return;}
+  if(price<min||margin<25){showFormMsg(msg,'err',`Sale rejected — minimum 25% margin. Min price: KES ${fmt(min)}`);return;}
   if(qty>Number(saleProduct.Stock)){showFormMsg(msg,'err','Not enough stock.');return;}
-  $('sale-btn').disabled=true;
-  loading(true);
+  $('sale-btn').disabled=true;loading(true);
   try{
     const res=await api({action:'recordSale',code:saleProduct.Code,productName:saleProduct.Name,qty,sellPrice:price,staff:currentUser.name,notes:payment,batchNumber:''});
     if(res.ok){
-      const idx=stockData.findIndex(p=>p.Code===saleProduct.Code);
-      if(idx>=0)stockData[idx].Stock=res.newStock;
+      const idx=stockData.findIndex(p=>p.Code===saleProduct.Code);if(idx>=0)stockData[idx].Stock=res.newStock;
       salesData.push({Timestamp:new Date().toISOString(),Code:saleProduct.Code,ProductName:saleProduct.Name,Qty:qty,SellPrice:price,LineTotal:qty*price,COGS:pr?qty*Number(pr.CostPrice):0,Profit:pr?(price-Number(pr.CostPrice))*qty:0,Staff:currentUser.name,Notes:payment});
       showFormMsg(msg,'ok',`Sale recorded — ${saleProduct.Name} × ${qty}`);
       showReceipt({productName:saleProduct.Name,code:saleProduct.Code,qty,sellPrice:price,payment,staff:currentUser.name,notes:$('s-notes').value});
       $('s-product').value='';$('s-qty').value=1;$('s-price').value='';$('s-notes').value='';
-      $('price-hint').className='price-hint';saleProduct=null;
-      renderSalesLog();
+      $('price-hint').className='price-hint';saleProduct=null;renderSalesLog();
     }else{showFormMsg(msg,'err',res.error||'Sale failed.');}
   }catch(e){showFormMsg(msg,'err','Network error.');}
-  loading(false);
-  $('sale-btn').disabled=false;
+  loading(false);$('sale-btn').disabled=false;
 }
 function showFormMsg(el,type,text){el.textContent=text;el.className='form-msg '+type;setTimeout(()=>{el.className='form-msg';},4000);}
 
-// ── Admin ──────────────────────────────────────────────────────────────
+// ADMIN
 function renderAdmin(){showSubTab('overview');}
 function showSubTab(id){
-  const adminEl=document.getElementById('sec-admin');
-  if(!adminEl)return;
+  const adminEl=document.getElementById('sec-admin');if(!adminEl)return;
   adminEl.querySelectorAll('.sub-tab').forEach(t=>t.classList.remove('active'));
   adminEl.querySelectorAll('.sub-section').forEach(s=>s.classList.remove('active'));
-  const tabBtn=adminEl.querySelector(`.sub-tab[data-tab="${id}"]`);
-  if(tabBtn)tabBtn.classList.add('active');
-  const section=document.getElementById('sub-'+id);
-  if(section)section.classList.add('active');
-  if(id==='overview')renderOverview();
-  if(id==='reorder')renderReorder();
-  if(id==='topup')renderTopup();
-  if(id==='prices')renderPrices();
-  if(id==='users')loadUsers();
-  if(id==='sales-log')initSalesLog();
-  if(id==='expiring')renderExpiring();
-  if(id==='invoice')renderInvoiceTab();
-  if(id==='bulk-sales')resetBulkSales();
-  if(id==='stocktake')resetStocktake();
+  const tabBtn=adminEl.querySelector(`.sub-tab[data-tab="${id}"]`);if(tabBtn)tabBtn.classList.add('active');
+  const section=document.getElementById('sub-'+id);if(section)section.classList.add('active');
+  if(id==='overview')renderOverview();if(id==='reorder')renderReorder();if(id==='topup')renderTopup();
+  if(id==='prices')renderPrices();if(id==='users')loadUsers();if(id==='sales-log')initSalesLog();
+  if(id==='expiring')renderExpiring();if(id==='invoice')resetInvoice();
+  if(id==='bulk-sales')resetBulkSales();if(id==='stocktake')resetStocktake();
+  if(id==='bulk-stock')resetBulkStock();
 }
 
-// ── Overview ───────────────────────────────────────────────────────────
 function renderOverview(){
   const rev=salesData.reduce((a,s)=>a+Number(s.LineTotal),0);
-  const cogs=salesData.reduce((a,s)=>a+Number(s.COGS),0);
-  const prof=rev-cogs;
-  const margin=rev>0?Math.round(prof/rev*100):0;
-  const sVal=stockData.reduce((a,p)=>{const pr=priceData.find(x=>x.Code===p.Code);return a+Number(p.Stock)*(pr?Number(pr.CostPrice):0);},0);
+  const cogs=salesData.reduce((a,s)=>a+Number(s.COGS),0);const prof=rev-cogs;
   const cashTotal=salesData.filter(s=>s.Notes==='Cash').reduce((a,s)=>a+Number(s.LineTotal),0);
   const mpesaTotal=salesData.filter(s=>s.Notes&&s.Notes.includes('MPesa')).reduce((a,s)=>a+Number(s.LineTotal),0);
   $('admin-stats').innerHTML=`
@@ -767,22 +698,19 @@ function renderOverview(){
     <div class="stat-card"><div class="stat-label">Cash</div><div class="stat-val">KES ${fmt(cashTotal)}</div></div>
     <div class="stat-card"><div class="stat-label">MPesa</div><div class="stat-val">KES ${fmt(mpesaTotal)}</div></div>`;
   $('admin-sales-tbody').innerHTML=salesData.length?salesData.slice().reverse().map(s=>{
-    const margin2=Number(s.LineTotal)>0?Math.round(Number(s.Profit)/Number(s.LineTotal)*100):0;
-    return`<tr><td style="color:var(--gray-400)">${fmtD(s.Timestamp)}</td><td>${s.ProductName}</td><td style="text-align:right">${s.Qty}</td><td style="text-align:right">KES ${fmt(s.LineTotal)}</td><td style="text-align:right;color:var(--green-400)">KES ${fmt(s.Profit)}</td><td style="text-align:right">${margin2}%</td><td><span class="pill ${s.Notes&&s.Notes.includes('MPesa')?'pill-blue':'pill-ok'}" style="font-size:10px">${s.Notes||'Cash'}</span></td><td style="color:var(--gray-400)">${s.Staff}</td></tr>`;
+    const m2=Number(s.LineTotal)>0?Math.round(Number(s.Profit)/Number(s.LineTotal)*100):0;
+    return`<tr><td style="color:var(--gray-400)">${fmtD(s.Timestamp)}</td><td>${s.ProductName}</td><td style="text-align:right">${s.Qty}</td><td style="text-align:right">KES ${fmt(s.LineTotal)}</td><td style="text-align:right;color:var(--green-400)">KES ${fmt(s.Profit)}</td><td style="text-align:right">${m2}%</td><td><span class="pill ${s.Notes&&s.Notes.includes('MPesa')?'pill-blue':'pill-ok'}" style="font-size:10px">${s.Notes||'Cash'}</span></td><td style="color:var(--gray-400)">${s.Staff}</td></tr>`;
   }).join(''):'<tr><td colspan="8" class="empty-state">No sales yet.</td></tr>';
 }
 
-// ── Reorder ────────────────────────────────────────────────────────────
 function renderReorder(){
   const rows=stockData.filter(p=>Number(p.Stock)<=Number(p.ReorderLevel));
   $('reorder-tbody').innerHTML=rows.length?rows.map(p=>`<tr><td class="code-cell">${p.Code}</td><td>${p.Name}</td><td style="color:var(--gray-400)">${p.Supplier}</td><td style="text-align:right;color:var(--red-600);font-weight:600">${p.Stock}</td><td style="text-align:right">${p.ReorderLevel}</td><td style="text-align:right;color:var(--red-600)">${Number(p.ReorderLevel)-Number(p.Stock)+1}</td></tr>`).join(''):'<tr><td colspan="6" class="empty-state">No items need reordering.</td></tr>';
 }
 
-// ── Top-up ─────────────────────────────────────────────────────────────
 function renderTopup(){
   $('tu-product').innerHTML='<option value="">Select product…</option>'+stockData.map(p=>`<option value="${p.Code}">${p.Code} — ${p.Name} (${p.Stock} in stock)</option>`).join('');
-  $('tu-current').value='';$('tu-preview').value='';$('tu-qty').value='';
-  filterTopupTable();
+  $('tu-current').value='';$('tu-preview').value='';$('tu-qty').value='';filterTopupTable();
 }
 function onTopupChange(){const code=$('tu-product').value;const p=stockData.find(x=>x.Code===code);if(p){$('tu-current').value=p.Stock+' '+p.Unit+'s';}else{$('tu-current').value='';$('tu-preview').value='';}updateTopupPreview();}
 function updateTopupPreview(){const code=$('tu-product').value;const p=stockData.find(x=>x.Code===code);const qty=parseInt($('tu-qty').value)||0;if(p&&qty>0){$('tu-preview').value=(Number(p.Stock)+qty)+' '+p.Unit+'s';}else{$('tu-preview').value='';}}
@@ -813,335 +741,406 @@ function filterTopupTable(){
 }
 function quickTopup(code){$('tu-product').value=code;onTopupChange();$('tu-qty').focus();window.scrollTo({top:0,behavior:'smooth'});}
 
-// ── Prices ─────────────────────────────────────────────────────────────
-function renderPrices(filter=''){
-  const q=filter||($('price-search')?$('price-search').value:'');
-  const rows=priceData.filter(p=>!q||p.Name.toLowerCase().includes(q.toLowerCase())||p.Code.toLowerCase().includes(q.toLowerCase()));
-  $('prices-tbody').innerHTML=rows.map(p=>{
-    const margin=Number(p.CostPrice)>0?Math.round((Number(p.MinSellPrice)-Number(p.CostPrice))/Number(p.MinSellPrice)*100):0;
-    const mcolor=margin<10?'color:var(--red-600)':margin<20?'color:var(--amber-600)':'color:var(--green-600)';
-    return`<tr class="price-row" id="pr-${p.Code}"><td class="code-cell">${p.Code}</td><td>${p.Name}</td><td style="text-align:right"><input type="number" step="0.01" value="${p.CostPrice}" id="c-${p.Code}" oninput="updateMarginPreview('${p.Code}')"></td><td style="text-align:right"><input type="number" step="0.01" value="${p.MinSellPrice}" id="m-${p.Code}" oninput="updateMarginPreview('${p.Code}')"></td><td style="text-align:right;font-weight:500;${mcolor}" id="mgn-${p.Code}">${margin}%</td><td style="display:flex;gap:6px;align-items:center"><button class="save-price-btn" onclick="savePrice('${p.Code}')">Save</button><span class="form-msg" id="pmsg-${p.Code}" style="font-size:11px;padding:3px 7px"></span></td></tr>`;
-  }).join('')||'<tr><td colspan="6" class="empty-state">No products found.</td></tr>';
-}
-function filterPricesTable(){renderPrices($('price-search').value);}
-function updateMarginPreview(code){const cost=parseFloat(document.getElementById('c-'+code).value)||0;const min=parseFloat(document.getElementById('m-'+code).value)||0;const el=$('mgn-'+code);if(!el)return;const margin=min>0?Math.round((min-cost)/min*100):0;el.textContent=margin+'%';el.style.color=margin<10?'var(--red-600)':margin<20?'var(--amber-600)':'var(--green-600)';}
-async function savePrice(code){
-  const cost=parseFloat(document.getElementById('c-'+code).value);const min=parseFloat(document.getElementById('m-'+code).value);const msg=$('pmsg-'+code);
-  if(isNaN(cost)||isNaN(min)){msg.textContent='Invalid numbers';msg.className='form-msg err';return;}
-  if(min<cost){msg.textContent='Min price below cost!';msg.className='form-msg err';return;}
-  loading(true);
-  const res=await api({action:'updatePrice',code,costPrice:cost,minSellPrice:min});
-  if(res.ok){const idx=priceData.findIndex(p=>p.Code===code);if(idx>=0){priceData[idx].CostPrice=cost;priceData[idx].MinSellPrice=min;}msg.textContent='Saved ✓';msg.className='form-msg ok';setTimeout(()=>{msg.textContent='';msg.className='form-msg';},3000);}
-  else{msg.textContent=res.error||'Failed';msg.className='form-msg err';}
-  loading(false);
-}
-
-// ── Users ──────────────────────────────────────────────────────────────
-async function loadUsers(){
-  loading(true);
-  const res=await api({action:'getUsers',requesterRole:currentUser.role});
-  if(res.ok){$('users-tbody').innerHTML=res.data.map(u=>`<tr><td><code>${u.Username}</code></td><td>${u.Name}</td><td><span class="pill ${u.Role==='admin'?'pill-info':'pill-ok'}">${u.Role}</span></td><td>${u.Active?'✓':''}</td><td><button class="btn-sm" onclick="prefillUser('${u.Username}','${u.Name}','${u.Role}')">Edit</button> <button class="btn-sm" style="color:var(--red-600)" onclick="deleteUser('${u.Username}')">Remove</button></td></tr>`).join('');}
-  loading(false);
-}
-function prefillUser(username,name,role){$('u-username').value=username;$('u-fullname').value=name;$('u-role-sel').value=role;$('u-password').value='';$('u-username').focus();}
-async function saveUser(){
-  const username=$('u-username').value.trim();const password=$('u-password').value;const name=$('u-fullname').value.trim();const role=$('u-role-sel').value;const msg=$('user-msg');
-  if(!username||!name){showFormMsg(msg,'err','Username and name are required.');return;}
-  loading(true);
-  const res=await api({action:'saveUser',requesterRole:currentUser.role,username,password,role,name,active:true});
-  if(res.ok){showFormMsg(msg,'ok',res.action==='created'?'User created.':'User updated.');loadUsers();}
-  else{showFormMsg(msg,'err',res.error||'Failed.');}
-  loading(false);
-}
-async function deleteUser(username){if(!confirm(`Remove user "${username}"?`))return;loading(true);await api({action:'deleteUser',requesterRole:currentUser.role,username});loadUsers();loading(false);}
-
-// ── Sales log ──────────────────────────────────────────────────────────
-function initSalesLog(){const today=new Date().toISOString().split('T')[0];$('log-from').value=today;$('log-to').value=today;loadSalesLog();}
-async function loadSalesLog(){
-  loading(true);
-  const res=await api({action:'getSales',dateFrom:$('log-from').value,dateTo:$('log-to').value});
-  if(res.ok){
-    $('log-tbody').innerHTML=res.data.length?res.data.slice().reverse().map(s=>`<tr>
-      <td style="color:var(--gray-400);font-size:12px">${new Date(s.Timestamp).toLocaleString()}</td>
-      <td class="code-cell">${s.Code}</td><td>${s.ProductName}</td>
-      <td style="text-align:right">${s.Qty}</td>
-      <td style="text-align:right">KES ${fmt(s.SellPrice)}</td>
-      <td style="text-align:right">KES ${fmt(s.LineTotal)}</td>
-      <td style="text-align:right;color:var(--green-400)">KES ${fmt(s.Profit)}</td>
-      <td><span class="pill ${s.Notes&&s.Notes.includes('MPesa')?'pill-blue':'pill-ok'}" style="font-size:10px">${s.Notes||'Cash'}</span></td>
-      <td style="color:var(--gray-400)">${s.Staff}</td>
-    </tr>`).join(''):'<tr><td colspan="9" class="empty-state">No sales in this date range.</td></tr>';
-  }
-  loading(false);
-}
-
-// ── Invoice upload ─────────────────────────────────────────────────────
-let invoiceItems=[];
-function renderInvoiceTab(){resetInvoice();}
-function handleDrop(e){e.preventDefault();document.getElementById('inv-drop').style.borderColor='var(--gray-200)';const file=e.dataTransfer.files[0];if(file)processInvoiceFile(file);}
-function handleFileSelect(input){const file=input.files[0];if(file)processInvoiceFile(file);}
-async function processInvoiceFile(file){
-  const status=$('inv-status');const statusText=$('inv-status-text');const errDiv=$('inv-error');const preview=$('inv-preview');
-  errDiv.style.display='none';preview.style.display='none';status.style.display='block';statusText.textContent='Reading invoice with AI...';
-  try{
-    const ext=file.name.split('.').pop().toLowerCase();
-    let messageContent=[];
-    if(['jpg','jpeg','png'].includes(ext)){
-      statusText.textContent='Processing image...';
-      const b64=await fileToBase64(file);const mediaType=ext==='png'?'image/png':'image/jpeg';
-      messageContent=[{type:'image',source:{type:'base64',media_type:mediaType,data:b64}},{type:'text',text:buildInvoicePrompt()}];
-    }else if(ext==='pdf'){
-      statusText.textContent='Reading PDF...';const b64=await fileToBase64(file);
-      messageContent=[{type:'document',source:{type:'base64',media_type:'application/pdf',data:b64}},{type:'text',text:buildInvoicePrompt()}];
-    }else if(ext==='csv'){
-      statusText.textContent='Reading CSV...';const text=await fileToText(file);
-      messageContent=[{type:'text',text:'Here is the invoice data:\n\n'+text+'\n\n'+buildInvoicePrompt()}];
-    }else{throw new Error('Unsupported file type. Please upload PDF, CSV, JPG or PNG.');}
-    statusText.textContent='AI is reading your invoice...';
-    const response=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,messages:[{role:'user',content:messageContent}]})});
-    const data=await response.json();
-    const text=data.content.map(i=>i.text||'').join('');
-    const clean=text.replace(/```json|```/g,'').trim();
-    const parsed=JSON.parse(clean);
-    status.style.display='none';renderInvoicePreview(parsed,file.name);
-  }catch(err){status.style.display='none';$('inv-error').textContent=err.message||'Could not read invoice.';$('inv-error').style.display='block';}
-}
-function buildInvoicePrompt(){
-  const productList=stockData.map(p=>p.Code+' — '+p.Name).join('\n');
-  return`You are reading a supplier delivery invoice for a veterinary/farm supplies shop.\nExtract all line items from this invoice (product name, quantity delivered, unit cost if visible, supplier name if visible).\nThen match each item to the closest product from this list:\n\n${productList}\n\nIf an item does not match any product in the list, mark it as a NEW product.\nRespond ONLY with a JSON array, no explanation, no markdown backticks. Format:\n[{"invoiceName":"product as written on invoice","matchedCode":"AGV-001","matchedName":"Vectoclor 250ml","qty":24,"unitCost":520,"supplier":"Elgon Kenya","confidence":"high","isNew":false}]\nRules:\n- confidence: "high","medium","none"\n- isNew: true only if genuinely not in list\n- unitCost,supplier,batchNumber,expiryDate,manufactureDate: extract if visible else null\n- If cannot read invoice, return []`;
-}
-function renderInvoicePreview(items,filename){
-  invoiceItems=items;const preview=$('inv-preview');const tbody=$('inv-tbody');const summary=$('inv-summary');
-  const matched=items.filter(i=>i.matchedCode&&!i.isNew);const newItems=items.filter(i=>i.isNew);const unmatched=items.filter(i=>!i.matchedCode&&!i.isNew);
-  summary.innerHTML=`Found <strong>${items.length}</strong> items in "<em>${filename}</em>" — <span style="color:var(--green-600)">${matched.length} matched</span>, <span style="color:var(--amber-600)">${newItems.length} new</span>, <span style="color:var(--red-600)">${unmatched.length} unmatched</span>.`;
-  tbody.innerHTML=items.map((item,idx)=>{
-    const isNew=item.isNew;const conf=item.confidence;
-    let statusClass,statusText2;
-    if(isNew){statusClass='inv-partial';statusText2='★ New product';}
-    else if(item.matchedCode){statusClass=conf==='high'?'inv-matched':'inv-partial';statusText2=conf==='high'?'✓ Matched':'⚠ Possible match';}
-    else{statusClass='inv-unmatched';statusText2='✗ Skipped';}
-    const newFields=isNew?`<tr style="background:var(--amber-50)"><td colspan="4" style="padding:8px 12px"><div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;font-size:12px"><div><label style="display:block;font-size:10px;color:var(--gray-600);margin-bottom:3px">Product name</label><input type="text" value="${item.invoiceName}" style="width:100%;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].invoiceName=this.value"></div><div><label style="display:block;font-size:10px;color:var(--gray-600);margin-bottom:3px">Unit</label><input type="text" value="${item.unit||'Bottle'}" style="width:100%;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].unit=this.value"></div><div><label style="display:block;font-size:10px;color:var(--gray-600);margin-bottom:3px">Supplier</label><input type="text" value="${item.supplier||''}" style="width:100%;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].supplier=this.value"></div><div><label style="display:block;font-size:10px;color:var(--gray-600);margin-bottom:3px">Cost price (KES)</label><input type="number" value="${item.unitCost||''}" style="width:100%;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].unitCost=parseFloat(this.value)||0"></div></div></td></tr>`:'';
-    return`<tr><td>${item.invoiceName}</td><td>${isNew?'<span style="color:var(--amber-600);font-weight:500">Will be created as new</span>':(item.matchedName||'<span style="color:var(--gray-400)">—</span>')}</td><td style="text-align:right"><input type="number" value="${item.qty}" min="0" style="width:70px;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].qty=parseInt(this.value)||0"></td><td><span class="pill ${statusClass}" style="font-size:11px;padding:2px 8px">${statusText2}</span></td></tr>${newFields}`;
-  }).join('')||'<tr><td colspan="4" class="empty-state">No items found in invoice.</td></tr>';
-  preview.style.display='block';
-}
-async function applyInvoice(){
-  const btn=$('inv-apply-btn');const msg=$('inv-msg');
-  const toUpdate=invoiceItems.filter(i=>i.matchedCode&&!i.isNew&&i.qty>0);
-  const toCreate=invoiceItems.filter(i=>i.isNew&&i.qty>0);
-  if(toUpdate.length===0&&toCreate.length===0){msg.textContent='No items to update.';msg.className='form-msg err';return;}
-  btn.disabled=true;loading(true);
-  let success=0,created=0,failed=0;
-  for(const item of toUpdate){try{const res=await api({action:'addStock',code:item.matchedCode,qty:item.qty});if(res.ok){const idx=stockData.findIndex(p=>p.Code===item.matchedCode);if(idx>=0)stockData[idx].Stock=res.newStock;success++;}else failed++;}catch(e){failed++;}}
-  for(const item of toCreate){try{const res=await api({action:'addProduct',name:item.invoiceName,unit:item.unit||'Bottle',stock:item.qty,supplier:item.supplier||'Unknown',reorderLevel:3,costPrice:item.unitCost||0});if(res.ok){stockData.push({Code:res.code,Name:item.invoiceName,Unit:item.unit||'Bottle',Stock:item.qty,Supplier:item.supplier||'Unknown',ReorderLevel:3});priceData.push({Code:res.code,Name:item.invoiceName,CostPrice:item.unitCost||0,MinSellPrice:res.minSellPrice});created++;}else failed++;}catch(e){failed++;}}
-  loading(false);btn.disabled=false;
-  let resultMsg='';if(success>0)resultMsg+=`${success} updated. `;if(created>0)resultMsg+=`${created} created. `;if(failed>0)resultMsg+=`${failed} failed.`;
-  if(success>0||created>0){msg.textContent='Done! '+resultMsg.trim();msg.className='form-msg ok';setTimeout(()=>resetInvoice(),5000);}
-  else{msg.textContent='All updates failed.';msg.className='form-msg err';}
-}
-function resetInvoice(){invoiceItems=[];$('inv-preview').style.display='none';$('inv-error').style.display='none';$('inv-status').style.display='none';$('inv-file').value='';$('inv-drop').style.borderColor='var(--gray-200)';const msg=$('inv-msg');if(msg){msg.textContent='';msg.className='form-msg';}}
-
-// ── BULK SALES UPLOAD ──────────────────────────────────────────────────
-function downloadSalesTemplate(){
-  const headers='date,code,productName,qty,sellPrice,payment,staff';
-  const example=[
-    '2026-06-03,AGV-035,Pyrotix 100ml,1,600,Cash,admin1',
-    '2026-06-03,AGV-013,Penstrep 100ml,1,450,MPesa Till,admin1',
-    '2026-06-10,AGV-009,Bedamec 1ltr,2,2000,Cash,admin1'
+// ── BULK STOCK UPLOAD ──────────────────────────────────────────────────
+function downloadStockTemplate(){
+  const headers='code,productName,unit,qty,supplier,costPrice';
+  const examples=[
+    '# To RESTOCK existing product: fill code + qty (other fields optional)',
+    'AGV-013,Penstrep 100ml,Bottle,24,Medina,360',
+    '# To ADD NEW product: leave code blank, fill all other fields',
+    ',Doxycycline 100mg,Sachet,20,Elgon Kenya,150',
+    ',Ampicillin 30g,Sachet,10,VAM Health,200',
   ].join('\n');
-  const csv=headers+'\n'+example;
-  const blob=new Blob([csv],{type:'text/csv'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='sales_template.csv';a.click();
+  const blob=new Blob([headers+'\n'+examples],{type:'text/csv'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='stock_upload_template.csv';a.click();
 }
-
-function handleBulkDrop(e){e.preventDefault();$('bs-drop').style.borderColor='var(--gray-200)';const file=e.dataTransfer.files[0];if(file)handleBulkSalesFile({files:[file]});}
-
-async function handleBulkSalesFile(input){
+function downloadCurrentStock(){
+  const headers='code,productName,unit,qty,supplier,costPrice';
+  const rows=stockData.map(p=>{
+    const pr=priceData.find(x=>x.Code===p.Code);
+    return`${p.Code},${p.Name},${p.Unit},${p.Stock},${p.Supplier},${pr?pr.CostPrice:''}`;
+  }).join('\n');
+  const blob=new Blob([headers+'\n'+rows],{type:'text/csv'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`current_stock_${new Date().toISOString().split('T')[0]}.csv`;a.click();
+}
+function handleBulkStockDrop(e){e.preventDefault();e.currentTarget.style.borderColor='var(--gray-200)';const file=e.dataTransfer.files[0];if(file)handleBulkStockFile({files:[file]});}
+async function handleBulkStockFile(input){
   const file=input.files[0];if(!file)return;
-  $('bs-error').style.display='none';$('bs-preview').style.display='none';
+  $('bst-error').style.display='none';$('bst-preview').style.display='none';
+  const ext=file.name.split('.').pop().toLowerCase();
+  // For images and PDFs — use AI to read
+  if(['jpg','jpeg','png','pdf'].includes(ext)){
+    await processStockViaAI(file,ext);return;
+  }
   try{
-    const ext=file.name.split('.').pop().toLowerCase();
     let rows=[];
     if(ext==='csv'){
       const text=await fileToText(file);
-      const lines=text.trim().split('\n');
-      const headers=lines[0].split(',').map(h=>h.trim().toLowerCase());
-      rows=lines.slice(1).filter(l=>l.trim()).map(line=>{
-        const vals=line.split(',');
-        const obj={};headers.forEach((h,i)=>obj[h]=(vals[i]||'').trim());
-        return obj;
-      });
-    }else if(ext==='xlsx'){
-      // Read xlsx using SheetJS via CDN
-      if(!window.XLSX){
-        await loadScript('https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js');
-      }
-      const buf=await file.arrayBuffer();
-      const wb=XLSX.read(buf,{type:'array'});
-      const ws=wb.Sheets[wb.SheetNames[0]];
-      const data=XLSX.utils.sheet_to_json(ws,{raw:false});
-      rows=data.map(r=>{const obj={};Object.keys(r).forEach(k=>obj[k.toLowerCase().trim()]=String(r[k]||'').trim());return obj;});
-    }else{throw new Error('Please upload a CSV or Excel (.xlsx) file.');}
-
-    // Validate and preview
-    bulkSalesRows=rows.map((r,i)=>{
-      const code=(r.code||'').toUpperCase();
-      const product=stockData.find(p=>p.Code===code)||null;
-      const qty=parseInt(r.qty)||0;
-      const price=parseFloat(r.sellprice||r['sell price']||r.sellprice||0);
-      const date=r.date||new Date().toISOString().split('T')[0];
-      const payment=r.payment||'Cash';
-      const staff=r.staff||currentUser.name;
-      const productName=r.productname||r['product name']||r.productname||(product?product.Name:'Unknown');
-      const pr=priceData.find(p=>p.Code===code);
-      const minSell=pr?Number(pr.MinSellPrice):0;
-      let status='ok';let warning='';
-      if(!product){status='error';warning='Product not found';}
-      else if(qty<1){status='error';warning='Invalid quantity';}
-      else if(price<minSell){status='warn';warning=`Price below min (KES ${fmt(minSell)})`;}
-      return{code,productName,qty,price,date,payment,staff,status,warning,product};
-    });
-
-    const errors=bulkSalesRows.filter(r=>r.status==='error');
-    const warns=bulkSalesRows.filter(r=>r.status==='warn');
-    $('bs-count').textContent=bulkSalesRows.length;
-
-    if(warns.length>0||errors.length>0){
-      $('bs-warnings').style.display='block';
-      $('bs-warnings').innerHTML=`⚠ ${errors.length} rows have errors (will be skipped). ${warns.length} rows have warnings (will still be uploaded).`;
-    }else{$('bs-warnings').style.display='none';}
-
-    $('bs-tbody').innerHTML=bulkSalesRows.map(r=>{
-      const statusHtml=r.status==='error'?`<span class="pill pill-warn">✗ ${r.warning}</span>`:r.status==='warn'?`<span class="pill pill-info">⚠ ${r.warning}</span>`:'<span class="pill pill-ok">✓ Ready</span>';
-      return`<tr style="${r.status==='error'?'opacity:.5':''}"><td style="color:var(--gray-400);font-size:12px">${r.date}</td><td class="code-cell">${r.code}</td><td>${r.productName}</td><td style="text-align:right">${r.qty}</td><td style="text-align:right">KES ${fmt(r.price)}</td><td style="text-align:right">KES ${fmt(r.qty*r.price)}</td><td>${r.payment}</td><td>${statusHtml}</td></tr>`;
-    }).join('');
-    $('bs-preview').style.display='block';
-  }catch(err){$('bs-error').textContent=err.message;$('bs-error').style.display='block';}
-}
-
-async function applyBulkSales(){
-  const btn=$('bs-apply-btn');const msg=$('bs-msg');
-  const validRows=bulkSalesRows.filter(r=>r.status!=='error');
-  if(!validRows.length){msg.textContent='No valid rows to upload.';msg.className='form-msg err';return;}
-  btn.disabled=true;loading(true);
-  try{
-    const rows=validRows.map(r=>({date:r.date,code:r.code,productName:r.productName,qty:r.qty,sellPrice:r.price,payment:r.payment,staff:r.staff}));
-    const res=await api({action:'bulkSales',requesterRole:currentUser.role,rows});
-    if(res.ok){
-      let txt=`✓ ${res.inserted} sales uploaded.`;
-      if(res.skipped&&res.skipped.length>0)txt+=` ${res.skipped.length} skipped.`;
-      msg.textContent=txt;msg.className='form-msg ok';
-      await loadAll();
-    }else{msg.textContent=res.error||'Upload failed.';msg.className='form-msg err';}
-  }catch(e){msg.textContent='Network error.';msg.className='form-msg err';}
-  loading(false);btn.disabled=false;
-}
-function resetBulkSales(){bulkSalesRows=[];if($('bs-preview'))$('bs-preview').style.display='none';if($('bs-error'))$('bs-error').style.display='none';if($('bs-file'))$('bs-file').value='';if($('bs-warnings'))$('bs-warnings').style.display='none';const msg=$('bs-msg');if(msg){msg.textContent='';msg.className='form-msg';}}
-
-// ── STOCK TAKE ─────────────────────────────────────────────────────────
-function downloadStocktakeTemplate(){
-  const headers='code,productName,systemQty,physicalCount,notes';
-  const rows=stockData.map(p=>`${p.Code},${p.Name},${p.Stock},,`).join('\n');
-  const csv=headers+'\n'+rows;
-  const blob=new Blob([csv],{type:'text/csv'});
-  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`stocktake_${new Date().toISOString().split('T')[0]}.csv`;a.click();
-}
-function handleStDrop(e){e.preventDefault();$('st-drop').style.borderColor='var(--gray-200)';const file=e.dataTransfer.files[0];if(file)handleStocktakeFile({files:[file]});}
-
-async function handleStocktakeFile(input){
-  const file=input.files[0];if(!file)return;
-  $('st-error').style.display='none';$('st-report').style.display='none';
-  try{
-    const ext=file.name.split('.').pop().toLowerCase();
-    let rows=[];
-    if(ext==='csv'){
-      const text=await fileToText(file);
-      const lines=text.trim().split('\n');
+      const lines=text.trim().split('\n').filter(l=>!l.trim().startsWith('#'));
       const headers=lines[0].split(',').map(h=>h.trim().toLowerCase());
       rows=lines.slice(1).filter(l=>l.trim()).map(line=>{
         const vals=line.split(',');const obj={};headers.forEach((h,i)=>obj[h]=(vals[i]||'').trim());return obj;
       });
     }else if(ext==='xlsx'){
       if(!window.XLSX)await loadScript('https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js');
+      const buf=await file.arrayBuffer();const wb=XLSX.read(buf,{type:'array'});
+      const ws=wb.Sheets[wb.SheetNames[0]];const data=XLSX.utils.sheet_to_json(ws,{raw:false});
+      rows=data.map(r=>{const obj={};Object.keys(r).forEach(k=>obj[k.toLowerCase().trim()]=String(r[k]||'').trim());return obj;});
+    }else{throw new Error('Unsupported file type. Please upload Excel, CSV, PDF, JPG or PNG.');}
+
+    processBulkStockRows(rows);
+  }catch(err){$('bst-error').textContent=err.message;$('bst-error').style.display='block';}
+}
+
+async function processStockViaAI(file,ext){
+  // Show loading
+  $('bst-error').style.display='none';
+  const loadDiv=document.createElement('div');
+  loadDiv.id='bst-loading';
+  loadDiv.style.cssText='display:flex;align-items:center;gap:10px;padding:12px;background:var(--gray-100);border-radius:var(--radius);margin-bottom:16px';
+  loadDiv.innerHTML='<div class="spinner" style="width:18px;height:18px;border-width:2px"></div><span style="font-size:13px;color:var(--gray-600)">Reading with AI...</span>';
+  $('sub-bulk-stock').querySelector('.sale-form').appendChild(loadDiv);
+  try{
+    const productList=stockData.map(p=>p.Code+' — '+p.Name).join('\n');
+    const prompt=`You are reading a supplier delivery invoice or stock list for a veterinary/farm supplies shop.\nExtract all line items: product name, quantity, unit cost if visible, supplier if visible.\nMatch each to this product list:\n${productList}\n\nRespond ONLY with JSON array — no markdown, no explanation:\n[{"name":"product name","matchedCode":"AGV-001 or empty if new","qty":24,"unit":"Bottle","supplier":"Supplier name","costPrice":520,"isNew":false}]\nIf no match found set isNew:true and matchedCode:"". Return [] if cannot read.`;
+    let messageContent=[];
+    if(['jpg','jpeg','png'].includes(ext)){
+      const b64=await fileToBase64(file);const mt=ext==='png'?'image/png':'image/jpeg';
+      messageContent=[{type:'image',source:{type:'base64',media_type:mt,data:b64}},{type:'text',text:prompt}];
+    }else{
+      const b64=await fileToBase64(file);
+      messageContent=[{type:'document',source:{type:'base64',media_type:'application/pdf',data:b64}},{type:'text',text:prompt}];
+    }
+    const response=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,messages:[{role:'user',content:messageContent}]})});
+    const data=await response.json();
+    const text=data.content.map(i=>i.text||'').join('');
+    const parsed=JSON.parse(text.replace(/```json|```/g,'').trim());
+    // Convert AI response to row format
+    const rows=parsed.map(item=>({
+      code:item.matchedCode||'',
+      name:item.name||'',
+      unit:item.unit||'Bottle',
+      qty:String(item.qty||0),
+      supplier:item.supplier||'Unknown',
+      costprice:String(item.costPrice||0),
+    }));
+    processBulkStockRows(rows);
+  }catch(err){$('bst-error').textContent='AI could not read the file: '+err.message;$('bst-error').style.display='block';}
+  finally{const ld=document.getElementById('bst-loading');if(ld)ld.remove();}
+}
+
+function processBulkStockRows(rows){
+    bulkStockRows=rows.filter(r=>(r.productname||r['product name']||r.name||r.code)).map(r=>{
+      const code=(r.code||'').toUpperCase().trim();
+      const name=r.productname||r['product name']||r.name||'';
+      const unit=r.unit||'Bottle';
+      const qty=parseInt(r.qty||r.quantity||0);
+      const supplier=r.supplier||'Unknown';
+      const costPrice=parseFloat(r.costprice||r['cost price']||r.cost||0);
+      const existingProduct=code?stockData.find(p=>p.Code===code):stockData.find(p=>p.Name.toLowerCase()===name.toLowerCase());
+      const isNew=!existingProduct;
+      const action=isNew?'Create new product':'Restock existing';
+      let status='ok';let warning='';
+      if(!qty||qty<1){status='error';warning='Invalid quantity';}
+      else if(isNew&&!name){status='error';warning='Product name required for new products';}
+      else if(isNew&&!costPrice){status='warn';warning='No cost price — min sell will be 0';}
+      return{code:existingProduct?existingProduct.Code:code,name:existingProduct?existingProduct.Name:name,unit,qty,supplier,costPrice,isNew,action,status,warning,existingProduct};
+    });
+
+    const errors=bulkStockRows.filter(r=>r.status==='error');
+    const warns=bulkStockRows.filter(r=>r.status==='warn');
+    $('bst-count').textContent=bulkStockRows.length;
+
+    if(errors.length||warns.length){
+      $('bst-warnings').style.display='block';
+      $('bst-warnings').innerHTML=`${errors.length} errors (will be skipped). ${warns.length} warnings (will proceed).`;
+    }else{$('bst-warnings').style.display='none';}
+
+    $('bst-tbody').innerHTML=bulkStockRows.map(r=>{
+      const actionPill=r.isNew?'<span class="pill pill-info">★ New</span>':'<span class="pill pill-ok">+ Restock</span>';
+      const statusPill=r.status==='error'?`<span class="pill pill-warn">✗ ${r.warning}</span>`:r.status==='warn'?`<span class="pill pill-info">⚠ ${r.warning}</span>`:'<span class="pill pill-ok">✓ Ready</span>';
+      return`<tr style="${r.status==='error'?'opacity:.5':''}"><td class="code-cell">${r.code||'—'}</td><td>${r.name}</td><td style="color:var(--gray-400)">${r.unit}</td><td style="color:var(--gray-400)">${r.supplier}</td><td style="text-align:right;font-weight:600">${r.qty}</td><td style="text-align:right">${r.costPrice?'KES '+fmt(r.costPrice):'—'}</td><td>${actionPill}</td><td>${statusPill}</td></tr>`;
+    }).join('');
+    $('bst-preview').style.display='block';
+}
+
+async function applyBulkStock(){
+  const btn=$('bst-apply-btn');const msg=$('bst-msg');
+  const validRows=bulkStockRows.filter(r=>r.status!=='error');
+  if(!validRows.length){msg.textContent='No valid rows.';msg.className='form-msg err';return;}
+  btn.disabled=true;loading(true);
+  let restocked=0,created=0,failed=0;
+  // Process one by one to avoid timeout
+  for(const row of validRows){
+    try{
+      if(row.isNew){
+        const res=await api({action:'addProduct',name:row.name,unit:row.unit||'Bottle',stock:row.qty,supplier:row.supplier||'Unknown',reorderLevel:3,costPrice:row.costPrice||0});
+        if(res.ok){
+          stockData.push({Code:res.code,Name:row.name,Unit:row.unit||'Bottle',Stock:row.qty,Supplier:row.supplier||'Unknown',ReorderLevel:3});
+          priceData.push({Code:res.code,Name:row.name,CostPrice:row.costPrice||0,MinSellPrice:res.minSellPrice});
+          created++;
+        }else failed++;
+      }else{
+        const res=await api({action:'addStock',code:row.code,qty:row.qty});
+        if(res.ok){const idx=stockData.findIndex(p=>p.Code===row.code);if(idx>=0)stockData[idx].Stock=res.newStock;restocked++;}
+        else failed++;
+      }
+    }catch(e){failed++;}
+  }
+  loading(false);btn.disabled=false;
+  let txt='';
+  if(restocked>0)txt+=`✓ ${restocked} restocked. `;
+  if(created>0)txt+=`✓ ${created} new products created. `;
+  if(failed>0)txt+=`${failed} failed.`;
+  if(restocked>0||created>0){msg.textContent=txt.trim();msg.className='form-msg ok';setTimeout(()=>resetBulkStock(),4000);}
+  else{msg.textContent='All failed. Check connection.';msg.className='form-msg err';}
+}
+function resetBulkStock(){bulkStockRows=[];if($('bst-preview'))$('bst-preview').style.display='none';if($('bst-error'))$('bst-error').style.display='none';if($('bst-file'))$('bst-file').value='';const msg=$('bst-msg');if(msg){msg.textContent='';msg.className='form-msg';}}
+
+// INVOICE UPLOAD (AI)
+function handleInvDrop(e){e.preventDefault();e.currentTarget.style.borderColor='var(--gray-200)';const file=e.dataTransfer.files[0];if(file)processInvoiceFile(file);}
+function handleInvFileSelect(input){const file=input.files[0];if(file)processInvoiceFile(file);}
+async function processInvoiceFile(file){
+  const status=$('inv-status');const statusText=$('inv-status-text');const errDiv=$('inv-error');const preview=$('inv-preview');
+  errDiv.style.display='none';preview.style.display='none';status.style.display='block';statusText.textContent='Reading invoice with AI...';
+  try{
+    const ext=file.name.split('.').pop().toLowerCase();let messageContent=[];
+    if(['jpg','jpeg','png'].includes(ext)){
+      const b64=await fileToBase64(file);const mediaType=ext==='png'?'image/png':'image/jpeg';
+      messageContent=[{type:'image',source:{type:'base64',media_type:mediaType,data:b64}},{type:'text',text:buildInvoicePrompt()}];
+    }else if(ext==='pdf'){
+      const b64=await fileToBase64(file);
+      messageContent=[{type:'document',source:{type:'base64',media_type:'application/pdf',data:b64}},{type:'text',text:buildInvoicePrompt()}];
+    }else if(ext==='csv'){
+      const text=await fileToText(file);
+      messageContent=[{type:'text',text:'Invoice data:\n\n'+text+'\n\n'+buildInvoicePrompt()}];
+    }else{throw new Error('Unsupported file type.');}
+    const response=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1000,messages:[{role:'user',content:messageContent}]})});
+    const data=await response.json();
+    const text=data.content.map(i=>i.text||'').join('');
+    const parsed=JSON.parse(text.replace(/```json|```/g,'').trim());
+    status.style.display='none';renderInvoicePreview(parsed,file.name);
+  }catch(err){status.style.display='none';$('inv-error').textContent=err.message||'Could not read invoice.';$('inv-error').style.display='block';}
+}
+function buildInvoicePrompt(){
+  const productList=stockData.map(p=>p.Code+' — '+p.Name).join('\n');
+  return`Extract all line items from this supplier invoice for a veterinary/farm supplies shop. Match each to this product list:\n\n${productList}\n\nRespond ONLY with JSON array:\n[{"invoiceName":"name on invoice","matchedCode":"AGV-001","matchedName":"Product","qty":24,"unitCost":520,"supplier":"Elgon","confidence":"high","isNew":false}]\nMark isNew:true if not in list. Return [] if unreadable.`;
+}
+function renderInvoicePreview(items,filename){
+  invoiceItems=items;const summary=$('inv-summary');
+  const matched=items.filter(i=>i.matchedCode&&!i.isNew);const newItems=items.filter(i=>i.isNew);const unmatched=items.filter(i=>!i.matchedCode&&!i.isNew);
+  summary.innerHTML=`<strong>${items.length}</strong> items in "${filename}" — <span style="color:var(--green-600)">${matched.length} matched</span>, <span style="color:var(--amber-600)">${newItems.length} new</span>, <span style="color:var(--red-600)">${unmatched.length} unmatched</span>.`;
+  $('inv-tbody').innerHTML=items.map((item,idx)=>{
+    const isNew=item.isNew;const conf=item.confidence;
+    let sc,st;
+    if(isNew){sc='inv-partial';st='★ New';}
+    else if(item.matchedCode){sc=conf==='high'?'inv-matched':'inv-partial';st=conf==='high'?'✓ Matched':'⚠ Possible';}
+    else{sc='inv-unmatched';st='✗ Skipped';}
+    const newFields=isNew?`<tr style="background:var(--amber-50)"><td colspan="4" style="padding:8px 12px"><div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;font-size:12px">
+      <div><label style="display:block;font-size:10px;color:var(--gray-600);margin-bottom:3px">Name</label><input type="text" value="${item.invoiceName}" style="width:100%;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].invoiceName=this.value"></div>
+      <div><label style="display:block;font-size:10px;color:var(--gray-600);margin-bottom:3px">Unit</label><input type="text" value="${item.unit||'Bottle'}" style="width:100%;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].unit=this.value"></div>
+      <div><label style="display:block;font-size:10px;color:var(--gray-600);margin-bottom:3px">Supplier</label><input type="text" value="${item.supplier||''}" style="width:100%;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].supplier=this.value"></div>
+      <div><label style="display:block;font-size:10px;color:var(--gray-600);margin-bottom:3px">Cost (KES)</label><input type="number" value="${item.unitCost||''}" style="width:100%;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].unitCost=parseFloat(this.value)||0"></div>
+      </div></td></tr>`:'';
+    return`<tr><td>${item.invoiceName}</td><td>${isNew?'<span style="color:var(--amber-600);font-weight:500">Will be created</span>':(item.matchedName||'—')}</td><td style="text-align:right"><input type="number" value="${item.qty}" min="0" style="width:70px;padding:3px 6px;border:1px solid var(--gray-200);border-radius:var(--radius);font-size:12px" onchange="invoiceItems[${idx}].qty=parseInt(this.value)||0"></td><td><span class="pill ${sc}" style="font-size:11px;padding:2px 8px">${st}</span></td></tr>${newFields}`;
+  }).join('')||'<tr><td colspan="4" class="empty-state">No items found.</td></tr>';
+  $('inv-preview').style.display='block';
+}
+async function applyInvoice(){
+  const btn=$('inv-apply-btn');const msg=$('inv-msg');
+  const toUpdate=invoiceItems.filter(i=>i.matchedCode&&!i.isNew&&i.qty>0);
+  const toCreate=invoiceItems.filter(i=>i.isNew&&i.qty>0);
+  if(!toUpdate.length&&!toCreate.length){msg.textContent='No items to update.';msg.className='form-msg err';return;}
+  btn.disabled=true;loading(true);
+  let success=0,created=0,failed=0;
+  for(const item of toUpdate){try{const res=await api({action:'addStock',code:item.matchedCode,qty:item.qty});if(res.ok){const idx=stockData.findIndex(p=>p.Code===item.matchedCode);if(idx>=0)stockData[idx].Stock=res.newStock;success++;}else failed++;}catch(e){failed++;}}
+  for(const item of toCreate){try{const res=await api({action:'addProduct',name:item.invoiceName,unit:item.unit||'Bottle',stock:item.qty,supplier:item.supplier||'Unknown',reorderLevel:3,costPrice:item.unitCost||0});if(res.ok){stockData.push({Code:res.code,Name:item.invoiceName,Unit:item.unit||'Bottle',Stock:item.qty,Supplier:item.supplier||'Unknown',ReorderLevel:3});priceData.push({Code:res.code,Name:item.invoiceName,CostPrice:item.unitCost||0,MinSellPrice:res.minSellPrice});created++;}else failed++;}catch(e){failed++;}}
+  loading(false);btn.disabled=false;
+  let txt='';if(success>0)txt+=`${success} updated. `;if(created>0)txt+=`${created} created. `;if(failed>0)txt+=`${failed} failed.`;
+  if(success>0||created>0){msg.textContent='Done! '+txt.trim();msg.className='form-msg ok';setTimeout(()=>resetInvoice(),5000);}
+  else{msg.textContent='All failed.';msg.className='form-msg err';}
+}
+function resetInvoice(){invoiceItems=[];$('inv-preview').style.display='none';$('inv-error').style.display='none';$('inv-status').style.display='none';$('inv-file').value='';const msg=$('inv-msg');if(msg){msg.textContent='';msg.className='form-msg';}}
+
+// BULK SALES
+function downloadSalesTemplate(){
+  const csv='date,code,productName,qty,sellPrice,payment,staff\n2026-06-03,AGV-035,Pyrotix 100ml,1,600,Cash,admin1\n2026-06-03,AGV-013,Penstrep 100ml,1,450,MPesa Till,admin1';
+  const blob=new Blob([csv],{type:'text/csv'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='sales_template.csv';a.click();
+}
+function handleBulkDrop(e){e.preventDefault();e.currentTarget.style.borderColor='var(--gray-200)';const file=e.dataTransfer.files[0];if(file)handleBulkSalesFile({files:[file]});}
+async function handleBulkSalesFile(input){
+  const file=input.files[0];if(!file)return;
+  $('bs-error').style.display='none';$('bs-preview').style.display='none';
+  try{
+    const ext=file.name.split('.').pop().toLowerCase();let rows=[];
+    if(ext==='csv'){
+      const text=await fileToText(file);const lines=text.trim().split('\n');
+      const headers=lines[0].split(',').map(h=>h.trim().toLowerCase());
+      rows=lines.slice(1).filter(l=>l.trim()).map(line=>{const vals=line.split(',');const obj={};headers.forEach((h,i)=>obj[h]=(vals[i]||'').trim());return obj;});
+    }else if(ext==='xlsx'){
+      if(!window.XLSX)await loadScript('https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js');
       const buf=await file.arrayBuffer();const wb=XLSX.read(buf,{type:'array'});const ws=wb.Sheets[wb.SheetNames[0]];
       const data=XLSX.utils.sheet_to_json(ws,{raw:false});
       rows=data.map(r=>{const obj={};Object.keys(r).forEach(k=>obj[k.toLowerCase().trim()]=String(r[k]||'').trim());return obj;});
     }else{throw new Error('Please upload a CSV or Excel (.xlsx) file.');}
-
-    stocktakeRows=rows.map(r=>{
-      const code=(r.code||'').toUpperCase();
-      const product=stockData.find(p=>p.Code===code);
-      const systemQty=product?Number(product.Stock):Number(r.systemqty||r['system qty']||0);
-      const physicalCount=r.physicalcount!==undefined&&r.physicalcount!==''?parseInt(r.physicalcount||r['physical count']):null;
-      const pr=priceData.find(p=>p.Code===code);
-      const costPrice=pr?Number(pr.CostPrice):0;
-      const variance=physicalCount!==null?physicalCount-systemQty:null;
-      const valueDiff=variance!==null?variance*costPrice:null;
-      return{code,productName:r.productname||r['product name']||(product?product.Name:'Unknown'),systemQty,physicalCount,variance,valueDiff,costPrice,notes:r.notes||''};
-    }).filter(r=>r.physicalCount!==null);
-
-    if(!stocktakeRows.length){throw new Error('No physical counts found. Make sure you filled in the "physicalCount" column.');}
-
-    const shorts=stocktakeRows.filter(r=>r.variance<0);
-    const overs=stocktakeRows.filter(r=>r.variance>0);
-    const matches=stocktakeRows.filter(r=>r.variance===0);
-    const totalValueDiff=stocktakeRows.reduce((a,r)=>a+(r.valueDiff||0),0);
-
-    $('st-date').textContent=new Date().toLocaleDateString();
-    $('st-stats').innerHTML=`
-      <div class="stat-card"><div class="stat-label">Items counted</div><div class="stat-val">${stocktakeRows.length}</div></div>
-      <div class="stat-card"><div class="stat-label">Shortages</div><div class="stat-val danger">${shorts.length}</div></div>
-      <div class="stat-card"><div class="stat-label">Overages</div><div class="stat-val success">${overs.length}</div></div>
-      <div class="stat-card"><div class="stat-label">Value diff</div><div class="stat-val ${totalValueDiff<0?'danger':''}">${totalValueDiff<0?'-':''}KES ${fmt(Math.abs(totalValueDiff))}</div></div>`;
-    filterStocktake();
-    $('st-report').style.display='block';
-  }catch(err){$('st-error').textContent=err.message;$('st-error').style.display='block';}
+    bulkSalesRows=rows.map(r=>{
+      const code=(r.code||'').toUpperCase();const product=stockData.find(p=>p.Code===code)||null;
+      const qty=parseInt(r.qty)||0;const price=parseFloat(r.sellprice||r['sell price']||0);
+      const date=r.date||new Date().toISOString().split('T')[0];const payment=r.payment||'Cash';
+      const staff=r.staff||currentUser.name;const productName=r.productname||r['product name']||(product?product.Name:'Unknown');
+      const pr=priceData.find(p=>p.Code===code);const minSell=pr?Number(pr.MinSellPrice):0;
+      let status='ok';let warning='';
+      if(!product){status='error';warning='Product not found';}
+      else if(qty<1){status='error';warning='Invalid qty';}
+      else if(price<minSell){status='warn';warning=`Below min KES ${fmt(minSell)}`;}
+      return{code,productName,qty,price,date,payment,staff,status,warning,product};
+    });
+    const errors=bulkSalesRows.filter(r=>r.status==='error');const warns=bulkSalesRows.filter(r=>r.status==='warn');
+    $('bs-count').textContent=bulkSalesRows.length;
+    if(errors.length||warns.length){$('bs-warnings').style.display='block';$('bs-warnings').innerHTML=`${errors.length} errors (skipped). ${warns.length} warnings (will upload).`;}
+    else{$('bs-warnings').style.display='none';}
+    $('bs-tbody').innerHTML=bulkSalesRows.map(r=>{
+      const sh=r.status==='error'?`<span class="pill pill-warn">✗ ${r.warning}</span>`:r.status==='warn'?`<span class="pill pill-info">⚠ ${r.warning}</span>`:'<span class="pill pill-ok">✓ Ready</span>';
+      return`<tr style="${r.status==='error'?'opacity:.5':''}"><td style="color:var(--gray-400);font-size:12px">${r.date}</td><td class="code-cell">${r.code}</td><td>${r.productName}</td><td style="text-align:right">${r.qty}</td><td style="text-align:right">KES ${fmt(r.price)}</td><td style="text-align:right">KES ${fmt(r.qty*r.price)}</td><td>${r.payment}</td><td>${sh}</td></tr>`;
+    }).join('');
+    $('bs-preview').style.display='block';
+  }catch(err){$('bs-error').textContent=err.message;$('bs-error').style.display='block';}
 }
-
-function filterStocktake(){
-  const q=($('st-search').value||'').toLowerCase();
-  const f=$('st-filter').value;
-  const rows=stocktakeRows.filter(r=>{
-    if(f==='short'&&r.variance>=0)return false;
-    if(f==='over'&&r.variance<=0)return false;
-    if(f==='match'&&r.variance!==0)return false;
-    return!q||r.productName.toLowerCase().includes(q)||r.code.toLowerCase().includes(q);
-  });
-  $('st-tbody').innerHTML=rows.map(r=>{
-    const vClass=r.variance<0?'variance-neg':r.variance>0?'variance-pos':'variance-zero';
-    const vSign=r.variance>0?'+':'';
-    const vdSign=r.valueDiff>0?'+':'';
-    return`<tr>
-      <td class="code-cell">${r.code}</td><td>${r.productName}</td>
-      <td style="text-align:right">${r.systemQty}</td>
-      <td style="text-align:right;font-weight:600">${r.physicalCount}</td>
-      <td style="text-align:right" class="${vClass}">${vSign}${r.variance}</td>
-      <td style="text-align:right" class="${vClass}">${vdSign}KES ${fmt(Math.abs(r.valueDiff))}</td>
-      <td>${r.variance===0?'<span class="pill pill-ok">✓ Match</span>':r.variance<0?'<span class="pill pill-warn">Short</span>':'<span class="pill pill-info">Over</span>'}</td>
-    </tr>`;
-  }).join('')||'<tr><td colspan="7" class="empty-state">No items match filter.</td></tr>';
-}
-
-async function applyStocktake(){
-  if(!confirm(`Apply physical counts to system stock? This will update ${stocktakeRows.filter(r=>r.variance!==0).length} items.`))return;
-  const btn=$('st-apply-btn');const msg=$('st-msg');btn.disabled=true;loading(true);
-  let updated=0,failed=0;
-  for(const row of stocktakeRows){
-    if(row.variance===0)continue;
+async function applyBulkSales(){
+  const btn=$('bs-apply-btn');const msg=$('bs-msg');
+  const validRows=bulkSalesRows.filter(r=>r.status!=='error');
+  if(!validRows.length){msg.textContent='No valid rows.';msg.className='form-msg err';return;}
+  btn.disabled=true;loading(true);
+  let inserted=0,skipped=0,failed=0;
+  // Send one at a time to avoid timeout
+  for(const row of validRows){
     try{
-      const res=await api({action:'updateStock',code:row.code,stock:row.physicalCount});
-      if(res.ok){const idx=stockData.findIndex(p=>p.Code===row.code);if(idx>=0)stockData[idx].Stock=row.physicalCount;updated++;}
-      else failed++;
+      const res=await api({action:'recordSale',code:row.code,productName:row.productName,qty:row.qty,sellPrice:row.price,staff:row.staff||currentUser.name,notes:row.payment||'Cash',batchNumber:''});
+      if(res.ok){
+        const idx=stockData.findIndex(p=>p.Code===row.code);
+        if(idx>=0)stockData[idx].Stock=res.newStock;
+        inserted++;
+      }else{skipped++;}
     }catch(e){failed++;}
   }
   loading(false);btn.disabled=false;
-  if(updated>0){msg.textContent=`✓ ${updated} items updated in system.`;msg.className='form-msg ok';}
+  let txt='';
+  if(inserted>0)txt+=`✓ ${inserted} sales recorded. `;
+  if(skipped>0)txt+=`${skipped} skipped (below min price or no stock). `;
+  if(failed>0)txt+=`${failed} failed.`;
+  if(inserted>0){msg.textContent=txt.trim();msg.className='form-msg ok';await loadAll();}
+  else{msg.textContent=txt||'All failed.';msg.className='form-msg err';}
+}
+function resetBulkSales(){bulkSalesRows=[];if($('bs-preview'))$('bs-preview').style.display='none';if($('bs-error'))$('bs-error').style.display='none';if($('bs-file'))$('bs-file').value='';const msg=$('bs-msg');if(msg){msg.textContent='';msg.className='form-msg';}}
+
+// STOCK TAKE
+function downloadStocktakeTemplate(){
+  const headers='code,productName,systemQty,physicalCount,notes';
+  const rows=stockData.map(p=>`${p.Code},${p.Name},${p.Stock},,`).join('\n');
+  const blob=new Blob([headers+'\n'+rows],{type:'text/csv'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`stocktake_${new Date().toISOString().split('T')[0]}.csv`;a.click();
+}
+function handleStDrop(e){e.preventDefault();e.currentTarget.style.borderColor='var(--gray-200)';const file=e.dataTransfer.files[0];if(file)handleStocktakeFile({files:[file]});}
+async function handleStocktakeFile(input){
+  const file=input.files[0];if(!file)return;
+  $('st-error').style.display='none';$('st-report').style.display='none';
+  try{
+    const ext=file.name.split('.').pop().toLowerCase();let rows=[];
+    if(ext==='csv'){const text=await fileToText(file);const lines=text.trim().split('\n');const headers=lines[0].split(',').map(h=>h.trim().toLowerCase());rows=lines.slice(1).filter(l=>l.trim()).map(line=>{const vals=line.split(',');const obj={};headers.forEach((h,i)=>obj[h]=(vals[i]||'').trim());return obj;});}
+    else if(ext==='xlsx'){if(!window.XLSX)await loadScript('https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js');const buf=await file.arrayBuffer();const wb=XLSX.read(buf,{type:'array'});const ws=wb.Sheets[wb.SheetNames[0]];const data=XLSX.utils.sheet_to_json(ws,{raw:false});rows=data.map(r=>{const obj={};Object.keys(r).forEach(k=>obj[k.toLowerCase().trim()]=String(r[k]||'').trim());return obj;});}
+    else{throw new Error('Please upload a CSV or Excel (.xlsx) file.');}
+    stocktakeRows=rows.map(r=>{
+      const code=(r.code||'').toUpperCase();const product=stockData.find(p=>p.Code===code);
+      const systemQty=product?Number(product.Stock):Number(r.systemqty||0);
+      const physicalCount=r.physicalcount!==undefined&&r.physicalcount!==''?parseInt(r.physicalcount):null;
+      const pr=priceData.find(p=>p.Code===code);const costPrice=pr?Number(pr.CostPrice):0;
+      const variance=physicalCount!==null?physicalCount-systemQty:null;
+      const valueDiff=variance!==null?variance*costPrice:null;
+      return{code,productName:r.productname||(product?product.Name:'Unknown'),systemQty,physicalCount,variance,valueDiff,costPrice,notes:r.notes||''};
+    }).filter(r=>r.physicalCount!==null);
+    if(!stocktakeRows.length){throw new Error('No physical counts found. Fill the "physicalCount" column.');}
+    const shorts=stocktakeRows.filter(r=>r.variance<0);const overs=stocktakeRows.filter(r=>r.variance>0);
+    const totalValueDiff=stocktakeRows.reduce((a,r)=>a+(r.valueDiff||0),0);
+    $('st-date').textContent=new Date().toLocaleDateString();
+    $('st-stats').innerHTML=`<div class="stat-card"><div class="stat-label">Items counted</div><div class="stat-val">${stocktakeRows.length}</div></div><div class="stat-card"><div class="stat-label">Shortages</div><div class="stat-val danger">${shorts.length}</div></div><div class="stat-card"><div class="stat-label">Overages</div><div class="stat-val success">${overs.length}</div></div><div class="stat-card"><div class="stat-label">Value diff</div><div class="stat-val ${totalValueDiff<0?'danger':''}">${totalValueDiff<0?'-':''}KES ${fmt(Math.abs(totalValueDiff))}</div></div>`;
+    filterStocktake();$('st-report').style.display='block';
+  }catch(err){$('st-error').textContent=err.message;$('st-error').style.display='block';}
+}
+function filterStocktake(){
+  const q=($('st-search').value||'').toLowerCase();const f=$('st-filter').value;
+  const rows=stocktakeRows.filter(r=>{if(f==='short'&&r.variance>=0)return false;if(f==='over'&&r.variance<=0)return false;if(f==='match'&&r.variance!==0)return false;return!q||r.productName.toLowerCase().includes(q)||r.code.toLowerCase().includes(q);});
+  $('st-tbody').innerHTML=rows.map(r=>{
+    const vc=r.variance<0?'variance-neg':r.variance>0?'variance-pos':'variance-zero';
+    const vs=r.variance>0?'+':'';const vds=r.valueDiff>0?'+':'';
+    return`<tr><td class="code-cell">${r.code}</td><td>${r.productName}</td><td style="text-align:right">${r.systemQty}</td><td style="text-align:right;font-weight:600">${r.physicalCount}</td><td style="text-align:right" class="${vc}">${vs}${r.variance}</td><td style="text-align:right" class="${vc}">${vds}KES ${fmt(Math.abs(r.valueDiff))}</td><td>${r.variance===0?'<span class="pill pill-ok">✓</span>':r.variance<0?'<span class="pill pill-warn">Short</span>':'<span class="pill pill-info">Over</span>'}</td></tr>`;
+  }).join('')||'<tr><td colspan="7" class="empty-state">No items match.</td></tr>';
+}
+async function applyStocktake(){
+  if(!confirm(`Update ${stocktakeRows.filter(r=>r.variance!==0).length} items in system?`))return;
+  const btn=$('st-apply-btn');const msg=$('st-msg');btn.disabled=true;loading(true);
+  let updated=0,failed=0;
+  for(const row of stocktakeRows){if(row.variance===0)continue;try{const res=await api({action:'updateStock',code:row.code,stock:row.physicalCount});if(res.ok){const idx=stockData.findIndex(p=>p.Code===row.code);if(idx>=0)stockData[idx].Stock=row.physicalCount;updated++;}else failed++;}catch(e){failed++;}}
+  loading(false);btn.disabled=false;
+  if(updated>0){msg.textContent=`✓ ${updated} items updated.`;msg.className='form-msg ok';}
   if(failed>0){msg.textContent+=' '+failed+' failed.';msg.className='form-msg err';}
 }
-
 function resetStocktake(){stocktakeRows=[];if($('st-report'))$('st-report').style.display='none';if($('st-error'))$('st-error').style.display='none';if($('st-file'))$('st-file').value='';}
 
-// ── Expiring ───────────────────────────────────────────────────────────
+// PRICES
+function renderPrices(filter=''){
+  const q=filter||($('price-search')?$('price-search').value:'');
+  const rows=priceData.filter(p=>!q||p.Name.toLowerCase().includes(q.toLowerCase())||p.Code.toLowerCase().includes(q.toLowerCase()));
+  $('prices-tbody').innerHTML=rows.map(p=>{
+    const margin=Number(p.CostPrice)>0?Math.round((Number(p.MinSellPrice)-Number(p.CostPrice))/Number(p.MinSellPrice)*100):0;
+    const mc=margin<25?'color:var(--red-600)':margin<30?'color:var(--amber-600)':'color:var(--green-600)';
+    return`<tr class="price-row"><td class="code-cell">${p.Code}</td><td>${p.Name}</td><td style="text-align:right"><input type="number" step="0.01" value="${p.CostPrice}" id="c-${p.Code}" oninput="updateMarginPreview('${p.Code}')"></td><td style="text-align:right"><input type="number" step="0.01" value="${p.MinSellPrice}" id="m-${p.Code}" oninput="updateMarginPreview('${p.Code}')"></td><td style="text-align:right;font-weight:500;${mc}" id="mgn-${p.Code}">${margin}%</td><td style="display:flex;gap:6px;align-items:center"><button class="save-price-btn" onclick="savePrice('${p.Code}')">Save</button><span class="form-msg" id="pmsg-${p.Code}" style="font-size:11px;padding:3px 7px"></span></td></tr>`;
+  }).join('')||'<tr><td colspan="6" class="empty-state">No products found.</td></tr>';
+}
+function filterPricesTable(){renderPrices($('price-search').value);}
+function updateMarginPreview(code){const cost=parseFloat(document.getElementById('c-'+code).value)||0;const min=parseFloat(document.getElementById('m-'+code).value)||0;const el=$('mgn-'+code);if(!el)return;const margin=min>0?Math.round((min-cost)/min*100):0;el.textContent=margin+'%';el.style.color=margin<25?'var(--red-600)':margin<30?'var(--amber-600)':'var(--green-600)';}
+async function savePrice(code){
+  const cost=parseFloat(document.getElementById('c-'+code).value);const min=parseFloat(document.getElementById('m-'+code).value);const msg=$('pmsg-'+code);
+  if(isNaN(cost)||isNaN(min)){msg.textContent='Invalid';msg.className='form-msg err';return;}
+  if(min<cost){msg.textContent='Below cost!';msg.className='form-msg err';return;}
+  loading(true);const res=await api({action:'updatePrice',code,costPrice:cost,minSellPrice:min});
+  if(res.ok){const idx=priceData.findIndex(p=>p.Code===code);if(idx>=0){priceData[idx].CostPrice=cost;priceData[idx].MinSellPrice=min;}msg.textContent='Saved ✓';msg.className='form-msg ok';setTimeout(()=>{msg.textContent='';msg.className='form-msg';},3000);}
+  else{msg.textContent=res.error||'Failed';msg.className='form-msg err';}
+  loading(false);
+}
+
+// USERS
+async function loadUsers(){
+  loading(true);const res=await api({action:'getUsers',requesterRole:currentUser.role});
+  if(res.ok){$('users-tbody').innerHTML=res.data.map(u=>`<tr><td><code>${u.Username}</code></td><td>${u.Name}</td><td><span class="pill ${u.Role==='admin'?'pill-info':'pill-ok'}">${u.Role}</span></td><td>${u.Active?'✓':''}</td><td><button class="btn-sm" onclick="prefillUser('${u.Username}','${u.Name}','${u.Role}')">Edit</button> <button class="btn-sm" style="color:var(--red-600)" onclick="deleteUser('${u.Username}')">Remove</button></td></tr>`).join('');}
+  loading(false);
+}
+function prefillUser(username,name,role){$('u-username').value=username;$('u-fullname').value=name;$('u-role-sel').value=role;$('u-password').value='';$('u-username').focus();}
+async function saveUser(){
+  const username=$('u-username').value.trim();const password=$('u-password').value;const name=$('u-fullname').value.trim();const role=$('u-role-sel').value;const msg=$('user-msg');
+  if(!username||!name){showFormMsg(msg,'err','Username and name required.');return;}
+  loading(true);const res=await api({action:'saveUser',requesterRole:currentUser.role,username,password,role,name,active:true});
+  if(res.ok){showFormMsg(msg,'ok',res.action==='created'?'User created.':'User updated.');loadUsers();}
+  else{showFormMsg(msg,'err',res.error||'Failed.');}loading(false);
+}
+async function deleteUser(username){if(!confirm(`Remove "${username}"?`))return;loading(true);await api({action:'deleteUser',requesterRole:currentUser.role,username});loadUsers();loading(false);}
+
+// SALES LOG
+function initSalesLog(){const today=new Date().toISOString().split('T')[0];$('log-from').value=today;$('log-to').value=today;loadSalesLog();}
+async function loadSalesLog(){
+  loading(true);const res=await api({action:'getSales',dateFrom:$('log-from').value,dateTo:$('log-to').value});
+  if(res.ok){$('log-tbody').innerHTML=res.data.length?res.data.slice().reverse().map(s=>`<tr>
+    <td style="color:var(--gray-400);font-size:12px">${new Date(s.Timestamp).toLocaleString()}</td>
+    <td class="code-cell">${s.Code}</td><td>${s.ProductName}</td>
+    <td style="text-align:right">${s.Qty}</td><td style="text-align:right">KES ${fmt(s.SellPrice)}</td>
+    <td style="text-align:right">KES ${fmt(s.LineTotal)}</td>
+    <td style="text-align:right;color:var(--green-400)">KES ${fmt(s.Profit)}</td>
+    <td><span class="pill ${s.Notes&&s.Notes.includes('MPesa')?'pill-blue':'pill-ok'}" style="font-size:10px">${s.Notes||'Cash'}</span></td>
+    <td style="color:var(--gray-400)">${s.Staff}</td>
+  </tr>`).join(''):'<tr><td colspan="9" class="empty-state">No sales in range.</td></tr>';}
+  loading(false);
+}
+
+// EXPIRING
 async function renderExpiring(){
   loading(true);const res=await api({action:'getExpiring',days:30});loading(false);
   const tbody=$('expiring-tbody');if(!tbody)return;
@@ -1150,23 +1149,20 @@ async function renderExpiring(){
   tbody.innerHTML=res.data.map(b=>{const exp=new Date(b.ExpiryDate);const daysLeft=Math.ceil((exp-now)/(1000*60*60*24));const color=daysLeft<7?'color:var(--red-600);font-weight:600':'color:var(--amber-600);font-weight:500';return`<tr><td class="code-cell">${b.Code}</td><td>${b.ProductName}</td><td><strong>${b.BatchNumber||'—'}</strong></td><td style="color:var(--gray-400)">${b.ManufactureDate||'—'}</td><td style="color:var(--gray-400)">${b.ExpiryDate||'—'}</td><td style="text-align:right">${b.Qty}</td><td style="${color}">${daysLeft<0?'EXPIRED':daysLeft+' days'}</td></tr>`;}).join('');
 }
 
-// ── Receipt ────────────────────────────────────────────────────────────
+// RECEIPT
 function showReceipt(data){
   const now=new Date();
-  $('r-datetime').textContent=now.toLocaleString();
-  $('r-product').textContent=data.productName;
-  $('r-code').textContent=data.code;
-  $('r-qty').textContent=data.qty;
+  $('r-datetime').textContent=now.toLocaleString();$('r-product').textContent=data.productName;
+  $('r-code').textContent=data.code;$('r-qty').textContent=data.qty;
   $('r-uprice').textContent='KES '+Number(data.sellPrice).toLocaleString('en-KE',{maximumFractionDigits:0});
   $('r-payment').textContent=data.payment||'Cash';
   $('r-total').textContent='KES '+(data.qty*data.sellPrice).toLocaleString('en-KE',{maximumFractionDigits:0});
-  $('r-staff').textContent=data.staff;
-  $('r-notes').textContent=data.notes||'—';
+  $('r-staff').textContent=data.staff;$('r-notes').textContent=data.notes||'—';
   $('receipt-modal').classList.add('open');
 }
 function closeReceipt(){$('receipt-modal').classList.remove('open');}
 
-// ── Helpers ────────────────────────────────────────────────────────────
+// HELPERS
 function fileToBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=()=>rej(new Error('Could not read file.'));r.readAsDataURL(file);});}
 function fileToText(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result);r.onerror=()=>rej(new Error('Could not read file.'));r.readAsText(file);});}
 function loadScript(src){return new Promise((res,rej)=>{const s=document.createElement('script');s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s);});}
